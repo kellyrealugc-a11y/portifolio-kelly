@@ -223,9 +223,13 @@ ul { padding: 0; margin: 0; list-style: none; }
 --------------------------------------------------------------------- */
 /* ================= HERO ================= */
 <section class="hero">
+
     <div class="hero-shape"></div>
+
     <div class="container hero-inner">
+
         <div class="hero-text-content">
+
             <p class="hero-kicker">
                 UGC CREATOR & SOCIAL MEDIA
             </p>
