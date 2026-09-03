@@ -21,19 +21,19 @@
 --------------------------------------------------------------------- */
 :root {
   /* Cores base */
-  --color-bg: #f5f1e8;          /* off-white quente, fundo principal */
-  --color-bg-alt: #ece5d4;      /* off-white mais escuro, seções alternadas */
-  --color-card: #fbf9f3;        /* superfícies de destaque (cards, form) */
+  --color-bg: #f8f3f1;          /* off-white quente, fundo principal */
+  --color-bg-alt: #f4ece9;      /* off-white mais escuro, seções alternadas */
+  --color-card: #ffffff;        /* superfícies de destaque (cards, form) */
 
-  --color-olive: #6b7052;       /* verde-oliva primário */
-  --color-olive-dark: #454a34;  /* verde-oliva escuro, títulos e header */
+  --color-olive: #b98a96;       /* verde-oliva primário */
+  --color-olive-dark: #a57483;  /* verde-oliva escuro, títulos e header */
 
-  --color-brown: #8a6a49;       /* marrom quente, acento secundário */
-  --color-brown-dark: #40301f;  /* marrom escuro, texto principal */
+  --color-brown: #d9b8c0;       /* marrom quente, acento secundário */
+  --color-brown-dark: #1f1f1f;  /* marrom escuro, texto principal */
 
-  --color-text: #3a3226;        /* texto do corpo */
-  --color-text-muted: #6d6252;  /* texto secundário */
-  --color-border: #d8cfba;      /* linhas divisórias */
+  --color-text: #1f1f1f;        /* texto do corpo */
+  --color-text-muted: #7d6d70;  /* texto secundário */
+  --color-border: #e7d8db;      /* linhas divisórias */
 
   /* Tipografia */
   --font-display: "Fraunces", Georgia, serif;
