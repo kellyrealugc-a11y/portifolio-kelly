@@ -221,102 +221,82 @@ ul { padding: 0; margin: 0; list-style: none; }
 /* ---------------------------------------------------------------------
    5. BANNER PRINCIPAL (HERO)
 --------------------------------------------------------------------- */
+/* ================= HERO ================= */
+
 .hero{
-    position:relative;
-    overflow:hidden;
-    background:#F9F4EF;
-    padding-top:20px;
-    padding-bottom: 70px;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 0 20px;
+    background: #faf7f4;
 }
 
-.hero-shape{
+.hero::before{
+    content:"";
     position:absolute;
-    top:-120px;
     right:-180px;
-    width:760px;
-    height:760px;
-    background:#EFE6DE;
+    top:-120px;
+    width:850px;
+    height:850px;
     border-radius:50%;
-    opacity:.75;
+    background:#f3e7e4;
     z-index:0;
 }
 
 .hero-inner{
-    position:relative;
-    z-index:2;
-
     max-width:1200px;
-    margin:auto;
-
+    margin:0 auto;
     display:grid;
     grid-template-columns:1fr 1fr;
     align-items:center;
-    gap:80px;
+    gap:70px;
+    position:relative;
+    z-index:2;
 }
 
-.hero-text-content{
-    width:100%;
-    max-width:560px;
+.hero-content{
+    margin-top:-70px;
 }
 
 .hero-kicker{
-    font-size:14px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:#C98C9F;
-    font-weight:700;
     margin-bottom:18px;
+    font-size:1rem;
+    font-weight:600;
 }
 
 .hero-title{
-    font-family:"Fraunces",serif;
-    font-size:64px;
+    font-size:4.2rem;
     line-height:1.05;
-    color:#2B211D;
-    margin-bottom:30px;
-    max-width:10ch;
-}
-
-.hero-title span{
-    color:#C98C9F;
+    margin-bottom:28px;
 }
 
 .hero-text{
-    font-size:18px;
+    font-size:1.2rem;
     line-height:1.8;
-    color:#7A6A63;
+    max-width:520px;
     margin-bottom:36px;
-    max-width:480px;
 }
 
 .hero-actions{
     display:flex;
     gap:18px;
-    flex-wrap:wrap;
 }
 
 .hero-image{
+    position:relative;
     display:flex;
-    justify-content:flex-end;
-    align-items:center;
+    justify-content:center;
+    align-items:flex-end;
+    margin-top:-90px;
 }
 
-.foto-capa{
+.hero-image img{
     width:100%;
-    max-width:520px;
-    height:650px;
+    max-width:720px;
+    display:block;
     object-fit:cover;
-    object-position:center;
-    border-radius:28px;
-    box-shadow:0 25px 70px rgba(0,0,0,.12);
+    border-radius:0;
+    box-shadow:none;
 }
-
-.reveal{
-    opacity:1;
-    transform:none;
-    animation:none;
-}
-
 /* ---------------------------------------------------------------------
    6. SOBRE
 --------------------------------------------------------------------- */
