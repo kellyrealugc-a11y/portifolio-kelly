@@ -280,9 +280,9 @@ ul { padding: 0; margin: 0; list-style: none; }
 
     font-family:"Fraunces",serif;
 
-    font-size:68px;
+    font-size:52px;
 
-    line-height:1.04;
+    line-height:1.01;
 
     color:#2B211D;
 
@@ -360,7 +360,7 @@ ul { padding: 0; margin: 0; list-style: none; }
     display:grid;
     grid-template-columns:1.05fr .95fr;
     align-items:center;
-    gap:70px;
+    gap:40px;
 
     max-width:1200px;
     margin:0 auto;
@@ -381,8 +381,8 @@ ul { padding: 0; margin: 0; list-style: none; }
 
 .hero-title{
     font-family:"Fraunces",serif;
-    font-size:64px;
-    line-height:1.05;
+    font-size:52px;
+    line-height:1.1;
     color:#2B211D;
     margin-bottom:28px;
 }
@@ -413,8 +413,8 @@ ul { padding: 0; margin: 0; list-style: none; }
 
 .hero-image img{
     width:100%;
-    max-width:540px;
-    height:680px;
+    max-width:430px;
+    height: auto;
     object-fit:cover;
     object-position:center;
     border-radius:28px;
