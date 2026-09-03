@@ -223,98 +223,43 @@ ul { padding: 0; margin: 0; list-style: none; }
 --------------------------------------------------------------------- */
 /* ================= HERO ================= */
 
-.hero{
-    position:relative;
-    overflow:hidden;
-    background:#F9F4EF;
-    padding:100px 0;
-}
+<section class="hero">
 
-.hero-shape{
-    position:absolute;
-    top:-120px;
-    right:-180px;
-    width:760px;
-    height:760px;
-    background:#EFE6DE;
-    border-radius:50%;
-    opacity:.75;
-    z-index:0;
-}
+    <div class="hero-shape"></div>
 
-.hero-inner{
-    position:relative;
-    z-index:2;
+    <div class="container hero-inner">
 
-    max-width:1200px;
-    margin:auto;
+        <div class="hero-text-content">
 
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:80px;
-}
+            <p class="hero-kicker">
+                UGC CREATOR & SOCIAL MEDIA
+            </p>
 
-.hero-text-content{
-    width:100%;
-    max-width:560px;
-}
+            <h1 class="hero-title">
+                Crio conteúdos REAIS<br>
+                que fazem marcas<br>
+                <span>VENDEREM</span> com<br>
+                identificação e confiança
+            </h1>
 
-.hero-kicker{
-    font-size:14px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:#C98C9F;
-    font-weight:700;
-    margin-bottom:18px;
-}
+            <p class="hero-text">
+                UGC que transforma a rotina real em conteúdos autênticos que aproximam marcas do público e geram conexão, confiança e vendas.
+            </p>
 
-.hero-title{
-    font-size: clamp(1.8rem, 2.8vw, 2.8rem);
-    line-height: 1.1;
-    font-weight: 600;
-    max-width: 450px;
-}
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary">Ver portfólio</a>
+                <a href="#contato" class="btn btn-ghost">Fale comigo</a>
+            </div>
 
-.hero-title span{
-    color:#C98C9F;
-}
+        </div>
 
-.hero-text{
-    font-size:18px;
-    line-height:1.8;
-    color:#7A6A63;
-    margin-bottom:36px;
-    max-width:480px;
-}
+        <div class="hero-image">
+            <img src="capa dois.png" class="foto-capa" alt="Kelly">
+        </div>
 
-.hero-actions{
-    display:flex;
-    gap:18px;
-    flex-wrap:wrap;
-}
+    </div>
 
-.hero-image{
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-}
-
-.foto-capa{
-    width:100%;
-    max-width:520px;
-    height:650px;
-    object-fit:cover;
-    object-position:center;
-    border-radius:28px;
-    box-shadow:0 25px 70px rgba(0,0,0,.12);
-}
-
-.reveal{
-    opacity:1;
-    transform:none;
-    animation:none;
-}
+</section>
 /* ---------------------------------------------------------------------
    6. SOBRE
 --------------------------------------------------------------------- */
