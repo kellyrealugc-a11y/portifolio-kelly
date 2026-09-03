@@ -241,6 +241,15 @@ ul { padding: 0; margin: 0; list-style: none; }
 
 .hero-inner { position: relative; z-index: 1; max-width: 720px; }
 
+/* Imagem da capa */
+.hero-image {
+    width: 100%;
+    max-width: 520px;
+    display: block;
+    margin: 0 auto 40px;
+    border-radius: 20px;
+    object-fit: cover;
+}
 .hero-kicker {
   font-weight: 600;
   color: var(--color-olive-dark);
