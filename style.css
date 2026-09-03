@@ -229,12 +229,12 @@ ul { padding: 0; margin: 0; list-style: none; }
 
 .hero-shape {
   position: absolute;
-  top: -120px;
-  right: -160px;
-  width: 520px;
-  height: 520px;
+  top: -80px;
+  right: -120px;
+  width: 700px;
+  height: 700px;
   border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
-  background: linear-gradient(135deg, var(--color-olive) 0%, var(--color-brown) 100%);
+  background: #f4eee8;
   opacity: 0.18;
   z-index: 0;
 }
