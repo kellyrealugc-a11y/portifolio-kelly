@@ -221,80 +221,99 @@ ul { padding: 0; margin: 0; list-style: none; }
 /* ---------------------------------------------------------------------
    5. BANNER PRINCIPAL (HERO)
 --------------------------------------------------------------------- */
-.hero {
-  position: relative;
-  padding: var(--space-xl) 0;
-  overflow: hidden;
+.hero{
+    position:relative;
+    overflow:hidden;
+    background:#F9F4EF;
+    padding:100px 0;
 }
 
-.hero-shape {
-  position: absolute;
-  top: -80px;
-  right: -120px;
-  width: 700px;
-  height: 700px;
-  border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
-  background: #f4eee8;
-  opacity: 0.18;
-  z-index: 0;
+.hero-shape{
+    position:absolute;
+    top:-120px;
+    right:-180px;
+    width:760px;
+    height:760px;
+    background:#EFE6DE;
+    border-radius:50%;
+    opacity:.75;
+    z-index:0;
 }
 
-.hero-inner {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
+.hero-inner{
+    position:relative;
+    z-index:2;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:80px;
 }
 
-/* Imagem da capa */
-.hero-image {
-    width: 100%;
-    max-width: 560px;
-    display: block;
-    margin: 0 auto 40px;
-    border-radius: 24px;
-    object-fit: cover;
-}
-.hero-kicker {
-  font-weight: 600;
-  color: var(--color-olive-dark);
-  margin-bottom: var(--space-sm);
+.hero-text-content{
+    width:100%;
+    max-width:560px;
 }
 
-.hero-title {
-  font-size: clamp(1.6rem, 3vw, 2.5rem);
-  max-width: 16ch;
+.hero-kicker{
+    font-size:14px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#C98C9F;
+    font-weight:700;
+    margin-bottom:18px;
 }
 
-.hero-text {
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
-  max-width: 48ch;
-
-   flex: 1;
-   order: 1;
+.hero-title{
+    font-family:"Fraunces",serif;
+    font-size:64px;
+    line-height:1.05;
+    color:#2B211D;
+    margin-bottom:30px;
+    max-width:10ch;
 }
 
-.hero-actions { display: flex; gap: var(--space-sm); margin-top: var(--space-md); flex-wrap: wrap; }
-
-/* Animação única de entrada (um só momento orquestrado) */
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  animation: reveal-in 0.7s ease forwards;
+.hero-title span{
+    color:#C98C9F;
 }
-.hero-kicker.reveal { animation-delay: 0.05s; }
-.hero-title.reveal { animation-delay: 0.15s; }
-.hero-text.reveal { animation-delay: 0.3s; }
-.hero-actions.reveal { animation-delay: 0.45s; }
 
-@keyframes reveal-in {
-  to { opacity: 1; transform: translateY(0); }
+.hero-text{
+    font-size:18px;
+    line-height:1.8;
+    color:#7A6A63;
+    margin-bottom:36px;
+    max-width:480px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.hero-image{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.foto-capa{
+    width:100%;
+    max-width:520px;
+    height:650px;
+    object-fit:cover;
+    object-position:center;
+    border-radius:28px;
+    box-shadow:0 25px 70px rgba(0,0,0,.12);
+}
+
+.reveal{
+    opacity:1;
+    transform:none;
+    animation:none;
 }
 
 /* ---------------------------------------------------------------------
