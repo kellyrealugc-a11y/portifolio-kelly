@@ -288,7 +288,107 @@ ul { padding: 0; margin: 0; list-style: none; }
     object-fit:cover;
     border-radius:0;
     box-shadow:none;
+}.hero{
+    position:relative;
+    overflow:hidden;
+    padding:80px 0;
+    background:#F9F4EF;
 }
+
+.hero::before{
+    content:"";
+    position:absolute;
+    right:-220px;
+    top:-120px;
+    width:780px;
+    height:780px;
+    background:#EFE6DE;
+    border-radius:50%;
+    opacity:.8;
+    z-index:0;
+}
+
+.hero-inner{
+    position:relative;
+    z-index:2;
+
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    align-items:center;
+    gap:70px;
+
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.hero-content{
+    max-width:560px;
+}
+
+.hero-kicker{
+    margin-bottom:18px;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#C98C9F;
+}
+
+.hero-title{
+    font-family:"Fraunces",serif;
+    font-size:64px;
+    line-height:1.05;
+    color:#2B211D;
+    margin-bottom:28px;
+}
+
+.hero-title span{
+    color:#C98C9F;
+}
+
+.hero-text{
+    font-size:18px;
+    line-height:1.8;
+    color:#7A6A63;
+    max-width:480px;
+    margin-bottom:36px;
+}
+
+.hero-actions{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.hero-image{
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:540px;
+    height:680px;
+    object-fit:cover;
+    object-position:center;
+    border-radius:28px;
+    box-shadow:0 30px 70px rgba(0,0,0,.10);
+}
+Um detalhe importante no HTML
+
+Pelo código que você enviou antes, a estrutura precisa ser esta:
+
+<div class="container hero-inner">
+
+    <div class="hero-content">
+        ...
+    </div>
+
+    <div class="hero-image">
+        <img src="capa dois.png" alt="Kelly UGC Creator">
+    </div>
+
 /* ---------------------------------------------------------------------
    6. SOBRE
 --------------------------------------------------------------------- */
