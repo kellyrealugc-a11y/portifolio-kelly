@@ -20,24 +20,34 @@
    Paleta: off-white, verde-oliva e marrom (pedida pelo cliente).
 --------------------------------------------------------------------- */
 :root {
-  /* Cores base */
-  --color-bg: #f8f3f1;          /* off-white quente, fundo principal */
-  --color-bg-alt: #f4ece9;      /* off-white mais escuro, seções alternadas */
-  --color-card: #ffffff;        /* superfícies de destaque (cards, form) */
+ /* Fundo */
+  --color-bg: #F9F4EF;
+  --color-bg-alt: #F3ECE5;
+  --color-card: #FFFFFF;
 
-  --color-olive: #b98a96;       /* verde-oliva primário */
-  --color-olive-dark: #a57483;  /* verde-oliva escuro, títulos e header */
+  /* Cores principais */
+  --color-primary: #C98C9F;
+  --color-primary-dark: #A96C82;
 
-  --color-brown: #d9b8c0;       /* marrom quente, acento secundário */
-  --color-brown-dark: #1f1f1f;  /* marrom escuro, texto principal */
+  /* Texto */
+  --color-text: #2B211D;
+  --color-text-muted: #7A6A63;
 
-  --color-text: #1f1f1f;        /* texto do corpo */
-  --color-text-muted: #7d6d70;  /* texto secundário */
-  --color-border: #e7d8db;      /* linhas divisórias */
+  /* Bordas */
+  --color-border: #E7D7CF;
+
+  /* Botões */
+  --color-button: #2B211D;
+  --color-button-hover: #4A3731;
+  --color-button-text: #FFFFFF;
+
+  /* Links */
+  --color-link: #C98C9F;
+  --color-link-hover: #A96C82;
 
   /* Tipografia */
   --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Work Sans", Arial, sans-serif;
 
   /* Espaçamento */
   --space-xs: 0.5rem;
@@ -48,9 +58,7 @@
 
   /* Layout */
   --container-width: 1120px;
-  --radius: 6px;
 }
-
 /* ---------------------------------------------------------------------
    2. RESET BÁSICO
 --------------------------------------------------------------------- */
