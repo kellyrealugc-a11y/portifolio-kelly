@@ -243,30 +243,22 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 .hero-inner{
-    max-width:1200px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:70px;
-    position:relative;
-    z-index:2;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: center;
+    gap: 40px;
 }
+    
 
 .hero-content{
-    margin-top:-70px;
+    max-width: 620px;
+    margin-top: -40px;
 }
 
 .hero-kicker{
     margin-bottom:12px;
     font-size:1rem;
     font-weight:500;
-}
-
-.hero-title{
-    font-size:2.0rem;
-    line-height:1.1;
-    margin-bottom:20px;
 }
 
 .hero-text{
