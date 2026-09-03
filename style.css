@@ -258,21 +258,21 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 .hero-kicker{
-    margin-bottom:18px;
+    margin-bottom:12px;
     font-size:1rem;
-    font-weight:600;
+    font-weight:500;
 }
 
 .hero-title{
-    font-size:4.2rem;
-    line-height:1.05;
-    margin-bottom:28px;
+    font-size:3.2rem;
+    line-height:1.1;
+    margin-bottom:20px;
 }
 
 .hero-text{
-    font-size:1.2rem;
-    line-height:1.8;
-    max-width:520px;
+    font-size:1.05rem;
+    line-height:1.6;
+    max-width:500px;
     margin-bottom:36px;
 }
 
