@@ -221,10 +221,10 @@ ul { padding: 0; margin: 0; list-style: none; }
 /* ---------------------------------------------------------------------
    5. BANNER PRINCIPAL (HERO)
 --------------------------------------------------------------------- */
-.hero {
-  position: relative;
-  padding: var(--space-xl) 0;
-  overflow: hidden;
+.hero{
+    background:#faf7f4;
+    padding:70px 0;
+    overflow:hidden;
 }
 
 .hero-shape {
@@ -239,18 +239,23 @@ ul { padding: 0; margin: 0; list-style: none; }
   z-index: 0;
 }
 
-.hero-inner {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+.hero-inner{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:70px;
 }
-
+.hero-text-content{
+    max-width:540px;
+   
+.hero-kicker{
+    font-size:14px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#8c8c8c;
+    margin-bottom:18px;
+}
+}
 /* Imagem da capa */
 .hero-image {
     width: 100%;
@@ -266,21 +271,66 @@ ul { padding: 0; margin: 0; list-style: none; }
   margin-bottom: var(--space-sm);
 }
 
-.hero-title {
-  font-size: clamp(1.6rem, 3vw, 2.5rem);
-  max-width: 16ch;
+.hero-title{
+    font-family:"Cormorant Garamond", serif;
+    font-size:58px;
+    line-height:1.05;
+    font-weight:500;
+    color:#2d2d2d;
+    margin-bottom:24px;
+}
+.hero-title span{
+    color:#d8a5b6;
+}
+.hero-text{
+    font-size:19px;
+    line-height:1.8;
+    color:#6d6d6d;
+    max-width:470px;
+    margin-bottom:35px;
 }
 
-.hero-text {
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
-  max-width: 48ch;
+.hero-actions{
+    display:flex;
+    gap:18px;
+}
+.hero-image{
+    display:flex;
+    justify-content:center;
+}
+.foto-capa{
+    width:100%;
+    max-width:600px;
+    border-radius:35px;
+    display:block;
+}
+@media(max-width:992px){
 
-   flex: 1;
-   order: 1;
+.hero-inner{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
 }
 
-.hero-actions { display: flex; gap: var(--space-sm); margin-top: var(--space-md); flex-wrap: wrap; }
+.hero-text-content{
+    max-width:100%;
+}
+
+.hero-title{
+    font-size:42px;
+}
+
+.hero-text{
+    max-width:100%;
+}
+
+.hero-actions{
+    justify-content:center;
+}
+
+.foto-capa{
+    max-width:480px;
+}
 
 /* Animação única de entrada (um só momento orquestrado) */
 .reveal {
