@@ -308,34 +308,104 @@ ul { padding: 0; margin: 0; list-style: none; }
 /* ---------------------------------------------------------------------
    6. SOBRE
 --------------------------------------------------------------------- */
-.about-grid {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: var(--space-xl);
-  align-items: center;
+.about{
+    padding:120px 0;
+    background:#faf7f4;
 }
 
-.about-media img {
-  border-radius: var(--radius);
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+.about-grid{
+    display:grid;
+    grid-template-columns:45% 55%;
+    align-items:center;
+    gap:80px;
 }
 
-.about-content h2 { max-width: 20ch; }
-
-.about-facts {
-  display: flex;
-  gap: var(--space-lg);
-  margin-top: var(--space-md);
-  padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border);
+.about-media img{
+    width:100%;
+    max-width:520px;
+    border-radius:28px;
+    display:block;
+    object-fit:cover;
+    box-shadow:none;
 }
 
-.about-facts strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  color: var(--color-olive-dark);
+.about-content{
+    max-width:600px;
+}
+
+.about-content span{
+    display:block;
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#8b8b8b;
+    margin-bottom:18px;
+}
+
+.about-content h2{
+    font-family:"Cormorant Garamond", serif;
+    font-size:3.2rem;
+    line-height:1.1;
+    font-weight:500;
+    color:#2b2b2b;
+    margin-bottom:28px;
+    max-width:18ch;
+}
+
+.about-content p{
+    font-size:1.05rem;
+    line-height:1.9;
+    color:#666;
+    margin-bottom:18px;
+}
+
+.about-facts{
+    display:flex;
+    gap:60px;
+    margin-top:45px;
+    padding-top:35px;
+    border-top:1px solid #e6ddd8;
+}
+
+.about-facts strong{
+    display:block;
+    font-family:"Cormorant Garamond", serif;
+    font-size:2.3rem;
+    font-weight:600;
+    color:#d8a8b8;
+    margin-bottom:5px;
+}
+
+.about-facts span{
+    display:block;
+    font-size:15px;
+    color:#666;
+    letter-spacing:0;
+    text-transform:none;
+}
+
+@media(max-width:900px){
+
+.about-grid{
+    grid-template-columns:1fr;
+    gap:45px;
+}
+
+.about-media{
+    order:1;
+}
+
+.about-content{
+    order:2;
+}
+
+.about-content h2{
+    font-size:2.4rem;
+}
+
+.about-facts{
+    gap:25px;
+    justify-content:space-between;
 }
 
 /* ---------------------------------------------------------------------
