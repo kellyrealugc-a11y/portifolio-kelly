@@ -221,132 +221,46 @@ ul { padding: 0; margin: 0; list-style: none; }
 /* ---------------------------------------------------------------------
    5. BANNER PRINCIPAL (HERO)
 --------------------------------------------------------------------- */
-.hero{
-    background:#faf7f4;
-    padding:70px 0;
-    overflow:hidden;
-}
+/* ================= HERO ================= */
+/* ================= HERO ================= */
 
-.hero-shape {
-  position: absolute;
-  top: -80px;
-  right: -120px;
-  width: 700px;
-  height: 700px;
-  border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
-  background: #f4eee8;
-  opacity: 0.18;
-  z-index: 0;
-}
+<section class="hero">
 
-.hero-inner{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:70px;
-}
-.hero-text-content{
-    max-width:540px;
-   
-.hero-kicker{
-    font-size:14px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:#8c8c8c;
-    margin-bottom:18px;
-}
-}
-/* Imagem da capa */
-.hero-image {
-    width: 100%;
-    max-width: 560px;
-    display: block;
-    margin: 0 auto 40px;
-    border-radius: 24px;
-    object-fit: cover;
-}
-.hero-kicker {
-  font-weight: 600;
-  color: var(--color-olive-dark);
-  margin-bottom: var(--space-sm);
-}
+    <div class="hero-shape"></div>
 
-.hero-title{
-    font-family:"Cormorant Garamond", serif;
-    font-size:58px;
-    line-height:1.05;
-    font-weight:500;
-    color:#2d2d2d;
-    margin-bottom:24px;
-}
-.hero-title span{
-    color:#d8a5b6;
-}
-.hero-text{
-    font-size:19px;
-    line-height:1.8;
-    color:#6d6d6d;
-    max-width:470px;
-    margin-bottom:35px;
-}
+    <div class="container hero-inner">
 
-.hero-actions{
-    display:flex;
-    gap:18px;
-}
-.hero-image{
-    display:flex;
-    justify-content:center;
-}
-.foto-capa{
-    width:100%;
-    max-width:600px;
-    border-radius:35px;
-    display:block;
-}
-@media(max-width:992px){
+        <div class="hero-text-content">
 
-.hero-inner{
-    grid-template-columns:1fr;
-    gap:40px;
-    text-align:center;
-}
+            <p class="hero-kicker">
+                UGC CREATOR & SOCIAL MEDIA
+            </p>
 
-.hero-text-content{
-    max-width:100%;
-}
+            <h1 class="hero-title">
+                Crio conteúdos REAIS<br>
+                que fazem marcas<br>
+                <span>VENDEREM</span> com<br>
+                identificação e confiança
+            </h1>
 
-.hero-title{
-    font-size:42px;
-}
+            <p class="hero-text">
+                UGC que transforma a rotina real em conteúdos autênticos que aproximam marcas do público e geram conexão, confiança e vendas.
+            </p>
 
-.hero-text{
-    max-width:100%;
-}
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary">Ver portfólio</a>
+                <a href="#contato" class="btn btn-ghost">Fale comigo</a>
+            </div>
 
-.hero-actions{
-    justify-content:center;
-}
+        </div>
 
-.foto-capa{
-    max-width:480px;
-}
+        <div class="hero-image">
+            <img src="capa dois.png" class="foto-capa" alt="Kelly">
+        </div>
 
-/* Animação única de entrada (um só momento orquestrado) */
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  animation: reveal-in 0.7s ease forwards;
-}
-.hero-kicker.reveal { animation-delay: 0.05s; }
-.hero-title.reveal { animation-delay: 0.15s; }
-.hero-text.reveal { animation-delay: 0.3s; }
-.hero-actions.reveal { animation-delay: 0.45s; }
+    </div>
 
-@keyframes reveal-in {
-  to { opacity: 1; transform: translateY(0); }
-}
-
+</section>
 /* ---------------------------------------------------------------------
    6. SOBRE
 --------------------------------------------------------------------- */
