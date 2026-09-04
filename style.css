@@ -222,40 +222,85 @@ ul { padding: 0; margin: 0; list-style: none; }
    5. BANNER PRINCIPAL (HERO)
 --------------------------------------------------------------------- */
 /* ================= HERO ================= */
+/* ================= HERO ================= */
 
-<section class="hero">
+.hero{
+    position: relative;
+    overflow: hidden;
+    background:#faf7f4;
+    padding:20px 0 40px;
+}
 
-    <div class="hero-shape"></div>
+.hero::before{
+    content:"";
+    position:absolute;
+    right:-180px;
+    top:-150px;
+    width:700px;
+    height:700px;
+    border-radius:50%;
+    background:#f3e7e4;
+    z-index:0;
+}
 
-    <div class="container hero-inner">
+.hero-inner{
+    position:relative;
+    z-index:2;
 
-        <div class="hero-text-content">
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
 
-            <p class="hero-kicker">
-                UGC CREATOR & SOCIAL MEDIA
-            </p>
+    gap:60px;
+}
 
-            <h1 class="hero-title">
-                Crio conteúdos REAIS<br>
-                que fazem marcas<br>
-                <span>VENDEREM</span> com<br>
-                identificação e confiança
-            </h1>
+.hero-text-content{
+    max-width:500px;
+}
 
-            <p class="hero-text">
-                UGC que transforma a rotina real em conteúdos autênticos que aproximam marcas do público e geram conexão, confiança e vendas.
-            </p>
+.hero-kicker{
+    font-size:14px;
+    letter-spacing:3px;
+    margin-bottom:18px;
+    color:#666;
+}
 
-            <div class="hero-actions">
-                <a href="#portfolio" class="btn btn-primary">Ver portfólio</a>
-                <a href="#contato" class="btn btn-ghost">Fale comigo</a>
-            </div>
+.hero-title{
+    font-size:3rem;
+    line-height:1.05;
+    font-weight:500;
+    margin-bottom:24px;
+}
 
-        </div>
+.hero-title span{
+    color:#d7bfd9;
+}
 
-        <div class="hero-image">
-            <img src="capa dois.png" class="foto-capa" alt="Kelly">
-        </div>
+.hero-text{
+    font-size:18px;
+    line-height:1.7;
+    max-width:460px;
+    margin-bottom:35px;
+    color:#666;
+}
+
+.hero-actions{
+    display:flex;
+    gap:16px;
+}
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.foto-capa{
+    width:100%;
+    max-width:480px;
+    border-radius:30px;
+    display:block;
+}
 
     </div>
 
