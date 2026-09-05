@@ -364,26 +364,26 @@ ul { padding: 0; margin: 0; list-style: none; }
         MARCAS
 ==========================*/
 .marcas{
-    width:100%;
-    padding:80px 20px;
-    text-align:center;
-    background:#fff;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
-.marcas h2{
-    font-size:2.6rem;
-    font-weight:700;
-    margin-bottom:40px;
-    color:#222;
+.titulo-marcas{
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 35px;
 }
 
-.marcas-img{
-    display:block;
-    width:100%;
-    max-width:1100px;
-    margin:0 auto;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
+.img-marcas{
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
 }
 /* ---------------------------------------------------------------------
    7. SERVIÇOS
