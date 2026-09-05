@@ -860,10 +860,10 @@ textarea:focus-visible {
     padding-left:24px;
 }
 
-.suspenso:hover .menu-suspenso{
-    opacity:1;
-    visibility:visible;
-    transform:translateX(-50%) translateY(0);
+..suspenso:hover .menu-suspenso{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
 }
 
 .suspenso:hover .seta{
