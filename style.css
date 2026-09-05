@@ -310,8 +310,9 @@ ul { padding: 0; margin: 0; list-style: none; }
 --------------------------------------------------------------------- */
 /* Fundo orgânico da seção Sobre */
 .about{
-    padding:80px 0;
-    background:#faf7f4;
+    padding: 30px 0 80px;
+    margin-top: -120px;
+    background: #faf7f4;
 }
 
 .about-grid{
@@ -322,39 +323,37 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 .about-media{
-    position:relative;
-   .about-media::before{
+    position: relative;
+    z-index: 1;
+}
+
+.about-media::before{
     content:"";
     position:absolute;
-    width:340px;
-    height:340px;
-    background:#e8dde8; /* lilás claro */
+    width:420px;
+    height:420px;
+    background:#f2e6ee;
     border-radius:50%;
-    top:-40px;
-    left:-50px;
+    top:-60px;
+    left:-70px;
     z-index:-1;
-    opacity:.7;
 }
 
 .about-media::after{
     content:"";
     position:absolute;
-    width:260px;
-    height:260px;
-    background:#f1e8ef;
+    width:240px;
+    height:240px;
+    background:#ece0ea;
     border-radius:50%;
+    right:-50px;
     bottom:-40px;
-    right:-40px;
     z-index:-1;
-    margin-top: -40px;
 }
 
 .about-media img{
-    width:100%;
-    max-width:400px;
-    display:block;
-    border-radius:28px;
-    object-fit:cover;
+    position:relative;
+    z-index:2;
 }
 
 .about-content{
