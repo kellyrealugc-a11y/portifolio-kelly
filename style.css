@@ -58,6 +58,10 @@
 
   /* Layout */
   --container-width: 1120px;
+  --radius:16px;
+  --color-olive:#8A8F6A;
+  --color-olive-dark:#6F7554;
+  --color-brown-dark:#2B211D;
 }
 /* ---------------------------------------------------------------------
    2. RESET BÁSICO
@@ -250,12 +254,12 @@ ul { padding: 0; margin: 0; list-style: none; }
     display:grid;
     grid-template-columns:1fr 1fr;
     align-items:center;
-
+    padding-bottom: 40px;
     gap:60px;
 }
 
 .hero-text-content{
-    max-width:500px;
+    max-width:560px;
 }
 
 .hero-kicker{
@@ -266,9 +270,9 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 .hero-title{
-    font-size:3rem;
+    font-size:2.7rem;
     line-height:1.05;
-    font-weight:500;
+    font-weight:400;
     margin-bottom:24px;
 }
 
@@ -302,42 +306,90 @@ ul { padding: 0; margin: 0; list-style: none; }
     display:block;
 }
 
-    </div>
-
-</section>
 /* ---------------------------------------------------------------------
    6. SOBRE
 --------------------------------------------------------------------- */
-.about-grid {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: var(--space-xl);
-  align-items: center;
+/* Fundo orgânico da seção Sobre */
+.about{
+    padding: 30px 0 80px;
+    margin-top: -120px;
+    background: #faf7f4;
 }
 
-.about-media img {
-  border-radius: var(--radius);
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+.about-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:70px;
+    align-items:center;
 }
 
-.about-content h2 { max-width: 20ch; }
-
-.about-facts {
-  display: flex;
-  gap: var(--space-lg);
-  margin-top: var(--space-md);
-  padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border);
+.about-media{
+    position:relative;
+    overflow:visible;
+    z-index:2;
 }
 
-.about-facts strong {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  color: var(--color-olive-dark);
+.about-media::before{
+    content:"";
+    position:absolute;
+    width:520px;
+    height:520px;
+    background:#f3e7ef;
+    border-radius:50%;
+    top:-90px;
+    left:-90px;
+    z-index:-1;
+    opacity:.9;
 }
 
+.about-media img{
+    position:relative;
+    z-index:2;
+}
+
+.about-content{
+    max-width:560px;
+}
+
+.about-content h2{
+    font-size:2rem;
+    line-height:1.15;
+   max-width: 16ch;
+}
+
+@media (max-width:900px){
+    .about-grid{
+        grid-template-columns:1fr;
+}
+/*==========================
+        MARCAS
+==========================*/
+.marcas{
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.titulo-marcas{
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.img-marcas{
+    display: block;
+    width: 100%;
+    max-width: 650px;   /* diminui a imagem */
+    height: auto;
+    margin: 25px auto;
+}
+
+.texto-marcas{
+    font-size: 0.95rem;
+    color: #777;
+    max-width: 600px;
+    margin: 15px auto 0;
+    line-height: 1.7;
+}
 /* ---------------------------------------------------------------------
    7. SERVIÇOS
 --------------------------------------------------------------------- */
@@ -480,32 +532,6 @@ ul { padding: 0; margin: 0; list-style: none; }
     overflow:hidden;
     box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
-/* ---------------------------------------------------------------------
-   8.  GALERIA
---------------------------------------------------------------------- */
-.gallery {
-  columns: 3 220px;
-  column-gap: var(--space-md);
-}
-
-.gallery-item {
-  margin: 0 0 var(--space-md);
-  break-inside: avoid;
-}
-
-.gallery-item img {
-  border-radius: var(--radius);
-  transition: opacity 0.2s ease;
-}
-
-.gallery-item:hover img { opacity: 0.85; }
-
-.gallery-item figcaption {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  margin-top: 0.5rem;
-}
-
 /* ---------------------------------------------------------------------
    8. PORTFÓLIO / GALERIA
 --------------------------------------------------------------------- */
@@ -765,7 +791,6 @@ textarea:focus-visible {
   html { scroll-behavior: auto; }
   .reveal { animation: none; opacity: 1; transform: none; }
 }
-
 /* ===========================
    MENU SUSPENSO PREMIUM
 =========================== */
@@ -830,7 +855,7 @@ textarea:focus-visible {
     padding-left:24px;
 }
 
-..suspenso:hover .menu-suspenso{
+.suspenso:hover .menu-suspenso{
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
