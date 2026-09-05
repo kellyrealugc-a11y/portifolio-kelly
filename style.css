@@ -367,13 +367,11 @@ ul { padding: 0; margin: 0; list-style: none; }
     text-align: center;
     padding: 70px 20px;
 }
-
-.titulo-marcas{
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    color: #222;
+.texto-marcas{
+    font-size: 17px;
+    color: #777;
+    margin-top: 15px;
 }
-
 .img-marcas{
     display: block;
     width: 100%;
