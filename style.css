@@ -762,3 +762,33 @@ textarea:focus-visible {
   html { scroll-behavior: auto; }
   .reveal { animation: none; opacity: 1; transform: none; }
 }
+/* MENU DROPDOWN */
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 180px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.1);
+    border-radius: 12px;
+}
+
+.dropdown-menu a{
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-menu a:hover{
+    background: #f8eef3;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
