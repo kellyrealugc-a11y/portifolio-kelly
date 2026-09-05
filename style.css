@@ -364,22 +364,33 @@ ul { padding: 0; margin: 0; list-style: none; }
 /* ---------------------------------------------------------------------
    7. SERVIÇOS
 --------------------------------------------------------------------- */
-.services-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border-top: 1px solid var(--color-border);
+.portfolio-category{
+    padding:120px 0;
 }
 
-.service-item {
-  padding: var(--space-md) var(--space-sm) var(--space-md) 0;
-  border-bottom: 1px solid var(--color-border);
+.portfolio-category h2{
+    font-size:3rem;
+    margin-bottom:16px;
 }
 
-.service-item:nth-child(odd) { padding-right: var(--space-lg); border-right: 1px solid var(--color-border); padding-left: 0; }
-.service-item:nth-child(even) { padding-left: var(--space-lg); }
+.section-description{
+    max-width:620px;
+    color:#6f6f6f;
+    margin-bottom:60px;
+    line-height:1.8;
+}
 
-.service-item h3 { font-size: 1.25rem; margin-bottom: 0.4rem; }
-.service-item p { color: var(--color-text-muted); margin-bottom: 0; }
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:28px;
+}
+
+.video-grid video{
+    width:100%;
+    border-radius:22px;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
 
 /* ---------------------------------------------------------------------
    8. PORTFÓLIO / GALERIA
