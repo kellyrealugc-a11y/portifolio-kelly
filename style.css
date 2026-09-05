@@ -323,11 +323,35 @@ ul { padding: 0; margin: 0; list-style: none; }
 
 .about-media{
     position:relative;
+   .about-media::before{
+    content:"";
+    position:absolute;
+    width:340px;
+    height:340px;
+    background:#e8dde8; /* lilás claro */
+    border-radius:50%;
+    top:-40px;
+    left:-50px;
+    z-index:-1;
+    opacity:.7;
+}
+
+.about-media::after{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    background:#f1e8ef;
+    border-radius:50%;
+    bottom:-40px;
+    right:-40px;
+    z-index:-1;
+    margin-top: -40px;
 }
 
 .about-media img{
     width:100%;
-    max-width:480px;
+    max-width:400px;
     display:block;
     border-radius:28px;
     object-fit:cover;
@@ -338,8 +362,9 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 .about-content h2{
-    font-size:3rem;
-    line-height:1.1;
+    font-size:2rem;
+    line-height:1.15;
+   max-width: 16ch;
 }
 
 @media (max-width:900px){
