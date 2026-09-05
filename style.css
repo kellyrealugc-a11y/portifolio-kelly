@@ -378,12 +378,11 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 .img-marcas{
-    display: block;
-    width: 100%;
-    max-width: 700px; /* ajuste aqui se quiser menor */
-    height: auto;
-    margin: 0 auto;
-    border-radius: 18px;
+    width: 450px !important;
+    max-width: 450px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 20px auto !important;
 }
 
 .texto-marcas{
