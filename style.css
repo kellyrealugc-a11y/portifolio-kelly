@@ -310,34 +310,35 @@ ul { padding: 0; margin: 0; list-style: none; }
 --------------------------------------------------------------------- */
 /* Fundo orgânico da seção Sobre */
 .about-media{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-media{
     position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .about-media::before{
     content:"";
     position:absolute;
-    width:95%;
-    height:95%;
-    background:#f4e9ee;
-    border-radius:40px;
-    top:-25px;
-    right:-25px;
+    width:420px;
+    height:420px;
+    background:#f3e9eb;
+    border-radius:50%;
+    top:40px;
+    left:-70px;
     z-index:0;
 }
 
 .about-media img{
     position:relative;
     z-index:1;
+
     width:100%;
-    max-width:460px;
-    border-radius:28px;
+    max-width:420px;
+    height:560px;
+
+    object-fit:cover;
+    border-radius:30px;
+
     display:block;
 }
 .about-content{
@@ -397,11 +398,11 @@ ul { padding: 0; margin: 0; list-style: none; }
 
 @media(max-width:900px){
 
-..about-grid{
+.about-grid{
     display:grid;
-    grid-template-columns:45% 55%;
-    gap:80px;
+    grid-template-columns:1fr 1fr;
     align-items:center;
+    gap:70px;
 }
 
 .about-media{
