@@ -309,119 +309,44 @@ ul { padding: 0; margin: 0; list-style: none; }
    6. SOBRE
 --------------------------------------------------------------------- */
 /* Fundo orgânico da seção Sobre */
-.about-media{
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.about{
+    padding:80px 0;
+    background:#faf7f4;
 }
-
-.about-media::before{
-    content:"";
-    position:absolute;
-    width:420px;
-    height:420px;
-    background:#f3e9eb;
-    border-radius:50%;
-    top:40px;
-    left:-70px;
-    z-index:0;
-}
-
-.about-media img{
-    position:relative;
-    z-index:1;
-
-    width:100%;
-    max-width:420px;
-    height:560px;
-
-    object-fit:cover;
-    border-radius:30px;
-
-    display:block;
-}
-.about-content{
-    max-width:600px;
-}
-
-.about-content span{
-    display:block;
-    font-size:13px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:#8b8b8b;
-    margin-bottom:18px;
-}
-
-.about-content h2{
-    font-family:"Cormorant Garamond", serif;
-    font-size:2.6rem;
-    line-height:1.15;
-    font-weight:500;
-    color:#2b2b2b;
-    margin-bottom:28px;
-    max-width:18ch;
-}
-
-.about-content p{
-    font-size:1.05rem;
-    line-height:1.9;
-    color:#666;
-    margin-bottom:18px;
-}
-
-.about-facts{
-    display:flex;
-    gap:60px;
-    margin-top:45px;
-    padding-top:35px;
-    border-top:1px solid #e6ddd8;
-}
-
-.about-facts strong{
-    display:block;
-    font-family:"Cormorant Garamond", serif;
-    font-size:2.3rem;
-    font-weight:600;
-    color:#d8a8b8;
-    margin-bottom:5px;
-}
-
-.about-facts span{
-    display:block;
-    font-size:15px;
-    color:#666;
-    letter-spacing:0;
-    text-transform:none;
-}
-
-@media(max-width:900px){
 
 .about-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
+    grid-template-columns: 1fr 1fr;
     gap:70px;
+    align-items:center;
 }
 
 .about-media{
-    order:1;
+    position:relative;
+}
+
+.about-media img{
+    width:100%;
+    max-width:480px;
+    display:block;
+    border-radius:28px;
+    object-fit:cover;
 }
 
 .about-content{
-    order:2;
+    max-width:560px;
 }
 
 .about-content h2{
-    font-size:2.4rem;
+    font-size:3rem;
+    line-height:1.1;
 }
 
-.about-facts{
-    gap:25px;
-    justify-content:space-between;
+@media (max-width:900px){
+    .about-grid{
+        grid-template-columns:1fr;
+    }
 }
-
 /* ---------------------------------------------------------------------
    7. SERVIÇOS
 --------------------------------------------------------------------- */
