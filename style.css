@@ -314,20 +314,19 @@ ul { padding: 0; margin: 0; list-style: none; }
     background:#faf7f4;
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:40% 60%;
-    align-items:center;
-    gap:50px;
+.about-media{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
 }
 
 .about-media img{
-    width:85%;
-    max-width:420px;
+    width:100%;
+    max-width:460px;
     border-radius:28px;
     display:block;
     object-fit:cover;
-    box-shadow:none;
+    margin-top:0;
 }
 
 .about-content{
