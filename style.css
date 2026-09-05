@@ -323,32 +323,22 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 .about-media{
-    position: relative;
-    z-index: 1;
+    position:relative;
+    overflow:visible;
+    z-index:2;
 }
 
 .about-media::before{
     content:"";
     position:absolute;
-    width:420px;
-    height:420px;
-    background:#f2e6ee;
+    width:520px;
+    height:520px;
+    background:#f3e7ef;
     border-radius:50%;
-    top:-60px;
-    left:-70px;
+    top:-90px;
+    left:-90px;
     z-index:-1;
-}
-
-.about-media::after{
-    content:"";
-    position:absolute;
-    width:240px;
-    height:240px;
-    background:#ece0ea;
-    border-radius:50%;
-    right:-50px;
-    bottom:-40px;
-    z-index:-1;
+    opacity:.9;
 }
 
 .about-media img{
