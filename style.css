@@ -315,14 +315,14 @@ ul { padding: 0; margin: 0; list-style: none; }
 
 .about-grid{
     display:grid;
-    grid-template-columns:45% 55%;
+    grid-template-columns:40% 60%;
     align-items:center;
-    gap:80px;
+    gap:50px;
 }
 
 .about-media img{
-    width:100%;
-    max-width:520px;
+    width:85%;
+    max-width:420px;
     border-radius:28px;
     display:block;
     object-fit:cover;
@@ -344,8 +344,8 @@ ul { padding: 0; margin: 0; list-style: none; }
 
 .about-content h2{
     font-family:"Cormorant Garamond", serif;
-    font-size:3.2rem;
-    line-height:1.1;
+    font-size:2.6rem;
+    line-height:1.15;
     font-weight:500;
     color:#2b2b2b;
     margin-bottom:28px;
