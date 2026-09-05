@@ -316,27 +316,30 @@ ul { padding: 0; margin: 0; list-style: none; }
     align-items: center;
 }
 
+.about-media{
+    position:relative;
+}
+
 .about-media::before{
-    content: "";
-    position: absolute;
-    width: 115%;
-    height: 115%;
-    background: #f4e9ee; /* rosa bem clarinho */
-    border-radius: 40% 60% 55% 45% / 45% 35% 65% 55%;
-    top: -30px;
-    right: -30px;
-    z-index: 0;
+    content:"";
+    position:absolute;
+    width:95%;
+    height:95%;
+    background:#f4e9ee;
+    border-radius:40px;
+    top:-25px;
+    right:-25px;
+    z-index:0;
 }
 
 .about-media img{
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: 460px;
-    border-radius: 28px;
-    object-fit: cover;
+    position:relative;
+    z-index:1;
+    width:100%;
+    max-width:460px;
+    border-radius:28px;
+    display:block;
 }
-
 .about-content{
     max-width:600px;
 }
@@ -394,9 +397,11 @@ ul { padding: 0; margin: 0; list-style: none; }
 
 @media(max-width:900px){
 
-.about-grid{
-    grid-template-columns:1fr;
-    gap:45px;
+..about-grid{
+    display:grid;
+    grid-template-columns:45% 55%;
+    gap:80px;
+    align-items:center;
 }
 
 .about-media{
