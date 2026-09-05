@@ -58,10 +58,6 @@
 
   /* Layout */
   --container-width: 1120px;
-  --radius:16px;
-  --color-olive:#8A8F6A;
-  --color-olive-dark:#6F7554;
-  --color-brown-dark:#2B211D;
 }
 /* ---------------------------------------------------------------------
    2. RESET BÁSICO
@@ -306,6 +302,9 @@ ul { padding: 0; margin: 0; list-style: none; }
     display:block;
 }
 
+    </div>
+
+</section>
 /* ---------------------------------------------------------------------
    6. SOBRE
 --------------------------------------------------------------------- */
@@ -365,30 +364,26 @@ ul { padding: 0; margin: 0; list-style: none; }
         MARCAS
 ==========================*/
 .marcas{
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
     text-align: center;
-    padding: 70px 20px;
 }
 
 .titulo-marcas{
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    color: #222;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 35px;
 }
 
 .img-marcas{
-    display: block;
     width: 100%;
-    max-width: 650px;   /* diminui a imagem */
+    max-width: 1100px;
     height: auto;
-    margin: 25px auto;
-}
-
-.texto-marcas{
-    font-size: 0.95rem;
-    color: #777;
-    max-width: 600px;
-    margin: 15px auto 0;
-    line-height: 1.7;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
 }
 /* ---------------------------------------------------------------------
    7. SERVIÇOS
@@ -794,71 +789,73 @@ textarea:focus-visible {
 /* ===========================
    MENU SUSPENSO PREMIUM
 =========================== */
-/* ITEM COM SUBMENU */
+
 .suspenso{
-    position:relative;
+    position: relative;
 }
 
-/* LINK PORTFÓLIO */
 .suspenso > a{
-    display:flex;
-    align-items:center;
-    gap:6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .seta{
-    font-size:12px;
-    transition:.3s;
+    font-size: 11px;
+    transition: transform .35s ease;
 }
 
-/* SUBMENU */
 .menu-suspenso{
-    position:absolute;
-    top:calc(100% + 12px);
-    left:50%;
-    transform:translateX(-50%);
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
 
-    min-width:230px;
+    min-width: 220px;
 
-    background:#ffffff;
-    border-radius:22px;
+    background: rgba(255,255,255,.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
-    padding:12px;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 18px;
 
-    box-shadow:0 20px 45px rgba(0,0,0,.10);
+    padding: 10px;
 
-    opacity:0;
-    visibility:hidden;
+    box-shadow: 0 18px 45px rgba(0,0,0,.12);
 
-    transition:.35s ease;
+    opacity: 0;
+    visibility: hidden;
 
-    z-index:999;
+    transition: all .35s ease;
+
+    z-index: 999;
 }
 
-/* LINKS */
 .menu-suspenso a{
     display:block;
-    padding:14px 18px;
-    color:#555;
-    border-radius:14px;
+    padding:12px 18px;
+
+    color:#444;
+    text-decoration:none;
+
+    border-radius:12px;
+
     transition:.25s;
-    font-size:15px;
 }
 
-/* HOVER ROXINHO */
 .menu-suspenso a:hover{
-    background:#F3E7F7;
-    color:#C98C9F;
+    background:#f7eef8;
+    color:#c69acb;
     padding-left:24px;
 }
 
-/* ABRIR MENU */
 .suspenso:hover .menu-suspenso{
     opacity:1;
     visibility:visible;
+    transform:translateX(-50%) translateY(0);
 }
 
-/* SETA */
 .suspenso:hover .seta{
     transform:rotate(180deg);
 }
