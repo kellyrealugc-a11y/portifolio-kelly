@@ -391,7 +391,34 @@ ul { padding: 0; margin: 0; list-style: none; }
     border-radius:22px;
     box-shadow:0 20px 40px rgba(0,0,0,.08);
 }
+.portfolio-category{
+    padding:100px 0;
+    background:#faf7f4;
+}
 
+.portfolio-category:nth-child(even){
+    background:#fff;
+}
+
+.section-description{
+    max-width:620px;
+    margin:20px 0 50px;
+    color:#666;
+    line-height:1.8;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:24px;
+}
+
+.video-grid video{
+    width:100%;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
 /* ---------------------------------------------------------------------
    8. PORTFÓLIO / GALERIA
 --------------------------------------------------------------------- */
