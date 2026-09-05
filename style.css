@@ -371,19 +371,29 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 .titulo-marcas{
-    font-size: 2.3rem;
+    font-size: 2.4rem;
     font-weight: 700;
-    color: #444;
-    margin-bottom: 35px;
+    color: #333;
+    margin-bottom: 30px;
 }
 
 .img-marcas{
-    width: 100%;
-    max-width: 1100px;
-    height: auto;
     display: block;
+    width: 100%;
+    max-width: 700px; /* ajuste aqui se quiser menor */
+    height: auto;
     margin: 0 auto;
-    border-radius: 20px;
+    border-radius: 18px;
+}
+
+.texto-marcas{
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* ---------------------------------------------------------------------
    7. SERVIÇOS
