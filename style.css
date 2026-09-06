@@ -1267,23 +1267,24 @@ textarea:focus-visible {
 }
 
 .menu-suspenso a{
-    display:block;
-    padding:12px 18px;
+    display: block;
+    padding: 12px 18px;
 
-    color:#444;
-    text-decoration:none;
+    color: #444;
+    text-decoration: none;
 
-    border-radius:12px;
+    border-radius: 12px;
 
-    transition:.25s;
+    transition: .25s;
 }
 
 .menu-suspenso a:hover{
-    background:#f7eef8;
-    color:#c69acb;
-    padding-left:24px;
+    background: #f7eef8;
+    color: #c69acb;
+    padding-left: 24px;
 }
 
+/* CORRIGIDO: havia dois pontos aqui */
 .suspenso:hover .menu-suspenso{
     opacity: 1;
     visibility: visible;
@@ -1291,6 +1292,6 @@ textarea:focus-visible {
 }
 
 .suspenso:hover .seta{
-    transform:rotate(180deg);
+    transform: rotate(180deg);
 }
 
