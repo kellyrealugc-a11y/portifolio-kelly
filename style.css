@@ -404,40 +404,24 @@ ul { padding: 0; margin: 0; list-style: none; }
     </div>
     
   </section>
-<!-- =========================  MARCAS  ========================== -->
-.marcas-section {
-    width: 100%;
-    padding: 80px 20px;
-    text-align: center;
-    background-color: #fff;
-}
+<!-- =========================
+     MARCAS
+========================== -->
+<section class="marcas">
 
-.marcas-section h2 {
-    font-size: 2rem;
-    font-weight: 300;
-    color: #333;
-    margin-bottom: 40px;
-    line-height: 1.4;
-}
+    <h2 class="titulo-marcas">
+        Marcas que confiaram no meu trabalho
+    </h2>
 
-.marcas-section h2 strong {
-    font-weight: 700;
-}
+    <img src="marcastrabalhadas.png"
+         alt="Marcas parceiras"
+         class="img-marcas">
 
-.imagem-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    <p class="texto-marcas">
+        Parcerias construídas com autenticidade, criatividade e resultados.
+    </p>
 
-.imagem-container img {
-    width: 100%;
-    max-width: 800px; /* Tamanho médio */
-    height: auto;
-    border-radius: 12px; /* Opcional */
-    display: block;
-}
-
+</section>
   <!-- ===================== PORTIFÓLIO ===================== -->
   <section class="portfolio-category" id="fitness">
     <div class="container">
@@ -1333,4 +1317,3 @@ textarea:focus-visible {
 .suspenso:hover .seta{
     transform:rotate(180deg);
 }
-
