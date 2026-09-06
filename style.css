@@ -914,23 +914,3 @@ textarea:focus-visible {
     transform:rotate(180deg);
 }
 
-/* ==========================
-   RESPONSIVO
-========================== */
-
-@media (max-width:768px){
-
-    .marcas{
-        padding:70px 20px;
-    }
-
-    .titulo-marcas{
-        font-size:1.8rem;
-        margin-bottom:30px;
-    }
-
-    .img-marcas{
-        max-width:100%;
-    }
-
-}
