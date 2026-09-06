@@ -295,7 +295,13 @@ ul { padding: 0; margin: 0; list-style: none; }
     align-items:center;
 }
 
-</section>
+.foto-capa{
+    width:100%;
+    max-width:480px;
+    border-radius:30px;
+    display:block;
+}
+
 /* ---------------------------------------------------------------------
    6. SOBRE
 --------------------------------------------------------------------- */
@@ -348,10 +354,9 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 @media (max-width:900px){
-
     .about-grid{
         grid-template-columns:1fr;
-    }
+}
 
 }
 
