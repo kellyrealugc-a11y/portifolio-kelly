@@ -6,20 +6,18 @@
    4. Cabeçalho / navegação
    5. Banner principal (hero)
    6. Sobre
-   7. Marca
-   8. Portfólio 
-   9. Fotos
-   10. Depoimento
-   11. Contato
+   7. Serviços
+   8. Portfólio / galeria
+   9. Depoimentos
+   10. Contato
    11. Rodapé
    12. Responsividade
    13. Acessibilidade (foco, movimento reduzido)
-  
    ===================================================================== */
 
 /* ---------------------------------------------------------------------
    1. TOKENS
-   Paleta: off-white, Lilás (pedida pelo cliente).
+   Paleta: off-white, verde-oliva e marrom (pedida pelo cliente).
 --------------------------------------------------------------------- */
 :root {
  /* Fundo */
@@ -252,12 +250,12 @@ ul { padding: 0; margin: 0; list-style: none; }
     display:grid;
     grid-template-columns:1fr 1fr;
     align-items:center;
-    padding-bottom: 40px;
+
     gap:60px;
 }
 
 .hero-text-content{
-    max-width:560px;
+    max-width:500px;
 }
 
 .hero-kicker{
@@ -268,9 +266,9 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 
 .hero-title{
-    font-size:2.7rem;
+    font-size:3rem;
     line-height:1.05;
-    font-weight:400;
+    font-weight:500;
     margin-bottom:24px;
 }
 
@@ -302,72 +300,542 @@ ul { padding: 0; margin: 0; list-style: none; }
     max-width:480px;
     border-radius:30px;
     display:block;
+}
 
-  <!-- ===================== CABEÇALHO / NAVEGAÇÃO ===================== -->
-  <header class="site-header" id="topo">
-    <div class="container header-inner">
-      <a href="#topo" class="logo">Kelly Real</a>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="site-nav" id="siteNav">
-        <a href="#sobre">Sobre</a>
-   <div class="suspenso">
-
-    <a href="#portfolio">
-        Portfólio
-        <span class="seta">▼</span>
-    </a>
-
-    <div class="menu-suspenso">
-        <a href="#fitness">Fitness</a>
-        <a href="#beleza">Beleza</a>
-        <a href="#lifestyle">Lifestyle</a>
-        <a href="#maternidade">Maternidade</a>
-        <a href="#garden">Garden</a>
     </div>
 
-</div>
-        <a href="#Fotos">Fotos</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#contato" class="nav-cta">Contato</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ===================== BANNER PRINCIPAL ===================== -->.
-  <section class="hero">
-
-    <div class="hero-shape" aria-hidden="true"></div>
-
-    <div class="container hero-inner">
-
-        <div class="hero-text-content">
-            <p class="hero-kicker reveal" data-reveal>
-                UGC Creator & Social Media
-            </p>
-
-            <h1 class="hero-title reveal" data-reveal>
-                Crio conteúdos UGC que aproximam <br>
-                <span>MARCAS de pessoas</span><br>
-                e transformam CONFIAÇA em vendas.
-            </h1>
-
-            <p class="hero-text reveal" data-reveal>
-                Transformo produtos em histórias que parecem indicação de uma amiga. Conteúdos que geram conexão, confiaça e vendas.
-            </p>
-
-            <div class="hero-actions reveal" data-reveal>
-                <a href="#portfolio" class="btn btn-primary">Ver portfólio</a>
-                <a href="#contato" class="btn btn-ghost">Vamos trabalhar juntos</a>
-            </div>
-        </div>
-
-        <div class="hero-image">
-            <img src="capa dois.png" alt="Kelly UGC Creator" class="foto-capa">
-        </div>
-    </div>
-    
 </section>
+/* ---------------------------------------------------------------------
+   6. SOBRE
+--------------------------------------------------------------------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about-media img {
+  border-radius: var(--radius);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.about-content h2 { max-width: 20ch; }
+
+.about-facts {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.about-facts strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-olive-dark);
+}
+
+/* ---------------------------------------------------------------------
+   7. SERVIÇOS
+--------------------------------------------------------------------- */
+.portfolio-category{
+    padding:120px 0;
+}
+
+.portfolio-category h2{
+    font-size:3rem;
+    margin-bottom:16px;
+}
+
+.section-description{
+    max-width:620px;
+    color:#6f6f6f;
+    margin-bottom:60px;
+    line-height:1.8;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:28px;
+}
+
+.video-grid video{
+    width:100%;
+    border-radius:22px;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+.portfolio-category{
+    padding:100px 0;
+    background:#faf7f4;
+}
+
+.portfolio-category:nth-child(even){
+    background:#fff;
+}
+
+.section-description{
+    max-width:620px;
+    margin:20px 0 50px;
+    color:#666;
+    line-height:1.8;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:24px;
+}
+
+.video-grid video{
+    width:100%;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+.portfolio-category{
+    padding:100px 0;
+    background:#faf7f4;
+}
+
+.portfolio-category:nth-child(even){
+    background:#fff;
+}
+
+.section-description{
+    max-width:620px;
+    margin:20px 0 50px;
+    color:#666;
+    line-height:1.8;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:24px;
+}
+
+.video-grid video{
+    width:100%;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+.portfolio-category{
+    padding:100px 0;
+    background:#faf7f4;
+}
+
+.portfolio-category:nth-child(even){
+    background:#fff;
+}
+
+.section-description{
+    max-width:620px;
+    margin:20px 0 50px;
+    color:#666;
+    line-height:1.8;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:24px;
+}
+
+.video-grid video{
+    width:100%;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+.portfolio-category{
+    padding:100px 0;
+    background:#faf7f4;
+}
+
+.portfolio-category:nth-child(even){
+    background:#fff;
+}
+
+.section-description{
+    max-width:620px;
+    margin:20px 0 50px;
+    color:#666;
+    line-height:1.8;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:24px;
+}
+
+.video-grid video{
+    width:100%;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+/* ---------------------------------------------------------------------
+   8.  GALERIA
+--------------------------------------------------------------------- */
+.gallery {
+  columns: 3 220px;
+  column-gap: var(--space-md);
+}
+
+.gallery-item {
+  margin: 0 0 var(--space-md);
+  break-inside: avoid;
+}
+
+.gallery-item img {
+  border-radius: var(--radius);
+  transition: opacity 0.2s ease;
+}
+
+.gallery-item:hover img { opacity: 0.85; }
+
+.gallery-item figcaption {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+
+/* ---------------------------------------------------------------------
+   8. PORTFÓLIO / GALERIA
+--------------------------------------------------------------------- */
+.gallery {
+  columns: 3 220px;
+  column-gap: var(--space-md);
+}
+
+.gallery-item {
+  margin: 0 0 var(--space-md);
+  break-inside: avoid;
+}
+
+.gallery-item img {
+  border-radius: var(--radius);
+  transition: opacity 0.2s ease;
+}
+
+.gallery-item:hover img { opacity: 0.85; }
+
+.gallery-item figcaption {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-top: 0.5rem;
+}
+
+/* ---------------------------------------------------------------------
+   9. DEPOIMENTOS
+--------------------------------------------------------------------- */
+.testimonial-slider { max-width: 680px; }
+
+.testimonial-track {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial {
+  display: none;
+  margin: 0;
+  padding: var(--space-md) 0;
+}
+
+.testimonial.is-active { display: block; }
+
+.testimonial p {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-brown-dark);
+  max-width: none;
+  margin-bottom: var(--space-sm);
+}
+
+.testimonial footer {
+  color: var(--color-olive-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.testimonial-controls button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-olive-dark);
+  background: transparent;
+  color: var(--color-olive-dark);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.testimonial-controls button:hover { background: var(--color-olive-dark); color: var(--color-bg); }
+
+.testimonial-dots { display: flex; gap: 0.4rem; }
+
+.testimonial-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: var(--color-border);
+  cursor: pointer;
+}
+
+.testimonial-dots button.is-active { background: var(--color-olive-dark); }
+
+/* ---------------------------------------------------------------------
+   10. CONTATO
+--------------------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.contact-info h2 { max-width: 18ch; }
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: var(--space-sm) 0 var(--space-md);
+  padding: 0.85rem 1.5rem;
+  background: var(--color-olive);
+  color: var(--color-bg);
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.whatsapp-btn:hover { background: var(--color-olive-dark); }
+
+.contact-details li {
+  color: var(--color-text-muted);
+  padding: 0.3rem 0;
+}
+
+.contact-form {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.form-row { margin-bottom: var(--space-sm); display: flex; flex-direction: column; gap: 0.4rem; }
+
+.form-row label { font-size: 0.9rem; font-weight: 600; color: var(--color-brown-dark); }
+
+.form-row input,
+.form-row textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.7rem 0.85rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+  resize: vertical;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--color-olive);
+}
+
+.form-row.has-error input,
+.form-row.has-error textarea { border-color: #a24a3a; }
+
+.form-error {
+  font-size: 0.82rem;
+  color: #a24a3a;
+  min-height: 1em;
+}
+
+.form-submit { width: 100%; justify-content: center; margin-top: var(--space-xs); }
+
+.form-status {
+  margin: var(--space-sm) 0 0;
+  font-size: 0.9rem;
+  color: var(--color-olive-dark);
+  font-weight: 600;
+  min-height: 1.2em;
+}
+
+/* ---------------------------------------------------------------------
+   11. RODAPÉ
+--------------------------------------------------------------------- */
+.site-footer {
+  background: var(--color-olive-dark);
+  color: var(--color-bg);
+  padding: var(--space-md) 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+}
+
+.footer-inner a { border-bottom: 1px solid transparent; }
+.footer-inner a:hover { border-color: var(--color-bg); }
+
+/* ---------------------------------------------------------------------
+   12. RESPONSIVIDADE
+--------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .about-grid,
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .about-media { order: -1; max-width: 320px; }
+
+  .services-list { grid-template-columns: 1fr; }
+
+  .service-item:nth-child(odd) {
+    padding-right: 0;
+    border-right: none;
+  }
+  .service-item:nth-child(even) { padding-left: 0; }
+
+  .gallery { columns: 2 200px; }
+}
+
+@media (max-width: 720px) {
+  .nav-toggle { display: flex; }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+    gap: var(--space-sm);
+    display: none;
+  }
+
+  .site-nav.is-open { display: flex; }
+
+  .nav-cta { margin-top: 0.3rem; }
+
+  .hero-shape { width: 360px; height: 360px; right: -140px; }
+
+  .gallery { columns: 1 100%; }
+}
+
+@media (max-width: 480px) {
+  :root { --space-xl: 3.5rem; --space-lg: 2.2rem; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+}
+
+/* ---------------------------------------------------------------------
+   13. ACESSIBILIDADE
+--------------------------------------------------------------------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-olive-dark);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { animation: none; opacity: 1; transform: none; }
+}
+
+/* ===========================
+   MENU SUSPENSO PREMIUM
+=========================== */
+
+.suspenso{
+    position: relative;
+}
+
+.suspenso > a{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.seta{
+    font-size: 11px;
+    transition: transform .35s ease;
+}
+
+.menu-suspenso{
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+
+    min-width: 220px;
+
+    background: rgba(255,255,255,.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 18px;
+
+    padding: 10px;
+
+    box-shadow: 0 18px 45px rgba(0,0,0,.12);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .35s ease;
+
+    z-index: 999;
+}
+
+.menu-suspenso a{
+    display:block;
+    padding:12px 18px;
+
+    color:#444;
+    text-decoration:none;
+
+    border-radius:12px;
+
+    transition:.25s;
+}
+
+.menu-suspenso a:hover{
+    background:#f7eef8;
+    color:#c69acb;
+    padding-left:24px;
+}
+
+..suspenso:hover .menu-suspenso{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.suspenso:hover .seta{
+    transform:rotate(180deg);
+}
