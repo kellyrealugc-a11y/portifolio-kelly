@@ -1222,9 +1222,7 @@ textarea:focus-visible {
   html { scroll-behavior: auto; }
   .reveal { animation: none; opacity: 1; transform: none; }
 }
-/* ===========================
-   MENU SUSPENSO PREMIUM
-=========================== */
+/* =========================== MENU SUSPENSO PREMIUM =========================== */
 
 .suspenso{
     position: relative;
@@ -1286,7 +1284,7 @@ textarea:focus-visible {
     padding-left:24px;
 }
 
-..suspenso:hover .menu-suspenso{
+.suspenso:hover .menu-suspenso{
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
