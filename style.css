@@ -295,12 +295,6 @@ ul { padding: 0; margin: 0; list-style: none; }
     align-items:center;
 }
 
-.foto-capa{
-    width:100%;
-    max-width:480px;
-    border-radius:30px;
-    display:block;
-
   <!-- ===================== CABEÇALHO / NAVEGAÇÃO ===================== -->
   <header class="site-header" id="topo">
     <div class="container header-inner">
@@ -333,6 +327,7 @@ ul { padding: 0; margin: 0; list-style: none; }
         <a href="#contato" class="nav-cta">Contato</a>
       </nav>
     </div>
+
   </header>
 
   <!-- ===================== BANNER PRINCIPAL ===================== -->.
