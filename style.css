@@ -815,57 +815,27 @@ textarea:focus-visible {
     transition: transform .35s ease;
 }
 
-.menu-suspenso{
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-
-    min-width: 220px;
-
-    background: rgba(255,255,255,.88);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-
-    border: 1px solid rgba(255,255,255,.5);
-    border-radius: 18px;
-
-    padding: 10px;
-
-    box-shadow: 0 18px 45px rgba(0,0,0,.12);
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition: all .35s ease;
-
-    z-index: 999;
-}
-
 .menu-suspenso a{
     display:block;
-    padding:12px 18px;
-
-    color:#444;
-    text-decoration:none;
-
+    padding:12px 16px;
     border-radius:12px;
-
+    text-decoration:none;
+    color:#444;
     transition:.25s;
 }
 
 .menu-suspenso a:hover{
-    background:#f7eef8;
-    color:#c69acb;
-    padding-left:24px;
+    background:#F7F4FF;
+    color:#A78BFA;
+    padding-left:22px;
 }
 
-.suspenso:hover .menu-suspenso{
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
+.linha-menu{
+    height:1px;
+    background:#ECECEC;
+    margin:10px 0;
 }
 
-.suspenso:hover .seta{
-    transform:rotate(180deg);
+.ver-todos{
+    font-weight:600;
 }
