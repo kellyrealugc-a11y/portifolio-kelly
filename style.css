@@ -366,26 +366,27 @@ ul { padding: 0; margin: 0; list-style: none; }
 .marcas{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .titulo-marcas{
-    font-size: 2.3rem;
-    font-weight: 700;
-    color: #444;
-    margin-bottom: 30px;
+    font-size: 2rem;
+    margin-bottom: 25px;
 }
 
 .img-marcas{
     display: block;
     width: 100%;
-    max-width: 800px;      /* diminui o tamanho */
+    max-width: 700px; /* ajuste entre 600 e 800px */
     height: auto;
-    margin: 0 auto;        /* centraliza */
+    margin: 0 auto;
     border-radius: 20px;
 }
-
 /* ---------------------------------------------------------------------
    7. SERVIÇOS
 --------------------------------------------------------------------- */
