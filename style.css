@@ -792,3 +792,17 @@ textarea:focus-visible {
 .suspenso:hover .seta{
     transform:rotate(180deg);
 }
+
+@media (max-width: 768px){
+
+    .hero-inner{
+        grid-template-columns: 1fr;
+        text-align:center;
+        gap:40px;
+    }
+
+    .hero-image{
+        order:-1;
+    }
+
+}
