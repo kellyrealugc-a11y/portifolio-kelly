@@ -3076,3 +3076,687 @@ html{
     }
 
 }
+/* =========================================================
+   AJUSTE MOBILE — KELLY REAL
+   NÃO ALTERA O DESKTOP
+========================================================= */
+
+@media (max-width: 768px){
+
+    /* =========================
+       BASE
+    ========================= */
+
+    html,
+    body{
+        width:100%;
+        max-width:100%;
+        overflow-x:hidden;
+    }
+
+    .container{
+        width:100%;
+        max-width:100%;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+
+    /* =========================
+       HEADER / MENU
+    ========================= */
+
+    .site-header{
+        position:sticky;
+        top:0;
+        z-index:9999;
+    }
+
+    .header-inner{
+        min-height:68px;
+        padding:12px 20px;
+    }
+
+    .logo{
+        font-size:1.35rem;
+    }
+
+    .nav-toggle{
+        display:flex !important;
+        align-items:center;
+        justify-content:center;
+        width:42px;
+        height:42px;
+        padding:8px;
+        flex-shrink:0;
+        z-index:10001;
+    }
+
+    .nav-toggle span{
+        display:block;
+        width:24px;
+        height:2px;
+        background:#2B211D !important;
+        border-radius:2px;
+    }
+
+    .site-nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        width:100%;
+
+        display:none;
+
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+
+        padding:12px 20px 20px;
+
+        background:#F9F4EF;
+        border-bottom:1px solid #E7D7CF;
+
+        box-shadow:0 12px 25px rgba(43,33,29,.08);
+
+        z-index:10000;
+    }
+
+    .site-nav.is-open{
+        display:flex !important;
+    }
+
+    .site-nav a{
+        display:block;
+        width:100%;
+        padding:13px 4px;
+        border-bottom:1px solid rgba(231,215,207,.65);
+        font-size:15px;
+    }
+
+    .site-nav .nav-cta{
+        width:max-content;
+        margin-top:12px;
+        padding:10px 18px;
+        border-bottom:none;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+        width:100%;
+        overflow:hidden;
+    }
+
+    .hero-inner{
+        display:flex !important;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+
+        width:100%;
+        gap:28px;
+
+        padding:45px 20px 70px;
+        text-align:center;
+    }
+
+    .hero-image{
+        order:-1;
+
+        width:min(88vw, 390px) !important;
+        height:auto !important;
+        aspect-ratio:460 / 430;
+
+        margin:0 auto;
+        flex-shrink:0;
+    }
+
+    .hero-image img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        border-radius:28px;
+    }
+
+    .hero-text-content{
+        width:100%;
+        max-width:560px;
+        margin:0 auto !important;
+    }
+
+    .hero-kicker{
+        font-size:11px;
+        letter-spacing:2px;
+        margin-bottom:12px;
+    }
+
+    .hero-title{
+        font-size:2.25rem;
+        line-height:1.05;
+        margin-bottom:18px;
+    }
+
+    .hero-text{
+        max-width:100%;
+        font-size:16px;
+        line-height:1.6;
+        margin:0 auto 20px;
+    }
+
+    .hero-actions{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:10px;
+        margin-top:20px;
+    }
+
+    .hero-actions .btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .hero-signature{
+        left:50%;
+        bottom:20px;
+
+        width:max-content;
+        max-width:90%;
+
+        font-size:27px;
+
+        transform:translateX(-50%) rotate(-5deg);
+    }
+
+    .hero-wave{
+        height:45px;
+    }
+
+    .hero-top-wave{
+        height:35px;
+    }
+
+
+    /* =========================
+       SOBRE
+    ========================= */
+
+    .about{
+        padding:50px 0 65px;
+    }
+
+    .about .container{
+        max-width:100%;
+        padding:0 20px;
+    }
+
+    .about-grid{
+        display:flex !important;
+        flex-direction:column;
+        gap:35px;
+    }
+
+    .about-media{
+        order:-1;
+        width:100%;
+        max-width:100%;
+    }
+
+    .about-media img{
+        width:100%;
+        max-width:100%;
+        height:auto;
+        aspect-ratio:1.2 / 1;
+        object-fit:cover;
+        border-radius:28px;
+    }
+
+    .about-media::before{
+        width:320px;
+        height:320px;
+        top:-70px;
+        left:-150px;
+    }
+
+    .about-content{
+        width:100%;
+        max-width:100%;
+        margin:0 !important;
+    }
+
+    .about-content h2{
+        font-size:2.3rem;
+        margin-bottom:20px;
+    }
+
+    .about-content p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .about-content ul{
+        flex-wrap:wrap;
+        gap:8px;
+        margin-top:20px;
+    }
+
+    .about-content li{
+        font-size:12px;
+        padding:7px 11px;
+    }
+
+    /* CORRIGE O 4 COLUNAS FORÇADO */
+    .about-facts{
+        display:grid !important;
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+        gap:10px !important;
+        width:100%;
+        margin-top:22px;
+    }
+
+    .about-fact{
+        padding:13px 12px;
+    }
+
+    .about-fact strong{
+        font-size:12px;
+    }
+
+    .about-fact small{
+        font-size:10px;
+    }
+
+    .about-signature{
+        font-size:21px !important;
+    }
+
+
+    /* =========================
+       MARCAS
+    ========================= */
+
+    .marcas{
+        width:100%;
+        max-width:100%;
+        padding:45px 15px 50px;
+    }
+
+    .titulo-marcas{
+        font-size:2.35rem;
+        white-space:normal;
+        line-height:1.05;
+    }
+
+    .marcas-card{
+        width:100%;
+        max-width:100%;
+        padding:12px;
+        border-radius:22px;
+    }
+
+    .img-marcas{
+        width:100%;
+        max-width:100%;
+        border-radius:12px;
+    }
+
+    .marcas-frase span{
+        font-size:24px;
+        line-height:1.1;
+    }
+
+    .marcas-ornamento{
+        gap:12px;
+    }
+
+    .marcas-ornamento i{
+        width:55px;
+    }
+
+
+    /* =========================
+       PORTFÓLIO
+    ========================= */
+
+    .portfolio-category{
+        padding:45px 0 55px;
+    }
+
+    .portfolio-category h2{
+        font-size:2.55rem !important;
+        line-height:1;
+    }
+
+    .portfolio-category .section-description{
+        font-size:15px;
+        line-height:1.65;
+    }
+
+    .wellness-heading,
+    .beleza-heading,
+    .garden-heading,
+    .maternidade-heading{
+        display:block !important;
+        margin-bottom:25px;
+    }
+
+    .wellness-title-area,
+    .beleza-title-area,
+    .garden-title-area{
+        max-width:100%;
+    }
+
+    .wellness-signature,
+    .beleza-signature,
+    .garden-signature,
+    .maternidade-signature{
+        width:auto;
+        min-width:0;
+        margin-top:18px;
+        padding-top:0;
+        text-align:left;
+        font-size:26px;
+        transform:none;
+    }
+
+    .wellness-signature i,
+    .beleza-signature i,
+    .garden-signature i,
+    .maternidade-signature i{
+        margin-left:0;
+    }
+
+    .video-grid{
+        width:100%;
+        justify-content:flex-start;
+        overflow-x:auto;
+
+        gap:14px;
+        padding:5px 3px 18px;
+
+        scroll-snap-type:x mandatory;
+        scrollbar-width:none;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .video-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .video-grid video{
+        flex:0 0 150px;
+        width:150px;
+        height:300px;
+        border-radius:20px;
+        scroll-snap-align:start;
+    }
+
+    .wellness-bottom{
+        gap:12px;
+        margin-top:25px;
+    }
+
+    .wellness-bottom i{
+        width:50px;
+    }
+
+
+    /* =========================
+       FOTOS
+    ========================= */
+
+    .fotos-destaque{
+        padding:45px 0 55px !important;
+    }
+
+    .fotos-heading{
+        display:block;
+        margin-bottom:25px;
+    }
+
+    .fotos-title-row{
+        display:block;
+    }
+
+    .fotos-heading .section-title{
+        white-space:normal;
+        font-size:2.15rem;
+        line-height:1.05;
+    }
+
+    .fotos-intro{
+        width:100%;
+        max-width:100%;
+        margin-top:12px;
+        font-size:.9rem;
+        line-height:1.5;
+    }
+
+    .fotos-assinatura{
+        width:auto;
+        margin-top:18px;
+        text-align:left;
+        font-size:25px;
+        transform:none;
+    }
+
+    .fotos-assinatura span{
+        white-space:normal;
+    }
+
+    .fotos-assinatura i{
+        margin-left:0;
+    }
+
+    .foto-principal{
+        width:94%;
+        padding:6px;
+        border-radius:18px;
+    }
+
+    .foto-principal img{
+        width:100%;
+        height:auto;
+        aspect-ratio:1.15 / 1;
+        object-fit:cover;
+        border-radius:13px;
+    }
+
+
+    /* =========================
+       GALERIA
+    ========================= */
+
+    #galeria{
+        padding:50px 0;
+    }
+
+    .campaign-grid{
+        display:grid;
+        grid-template-columns:1fr !important;
+        grid-template-rows:none !important;
+        gap:14px;
+    }
+
+    .card{
+        width:100%;
+        padding:6px;
+        border-radius:18px;
+    }
+
+    .card img{
+        width:100%;
+        height:auto;
+    }
+
+
+    /* =========================
+       DEPOIMENTOS
+    ========================= */
+
+    #depoimentos{
+        padding-top:50px;
+        padding-bottom:60px;
+    }
+
+    #depoimentos .container{
+        padding:0 20px;
+    }
+
+    #depoimentos .section-title{
+        font-size:2.35rem;
+        line-height:1.05;
+    }
+
+    .depoimentos-desc{
+        font-size:15px;
+        line-height:1.65;
+        margin-bottom:25px;
+    }
+
+    .testimonial-grid{
+        width:100%;
+        grid-template-columns:1fr !important;
+        gap:16px;
+        margin-top:30px;
+    }
+
+    .testimonial-card{
+        min-height:230px;
+        padding:20px;
+        border-radius:20px;
+    }
+
+
+    /* =========================
+       CONTATO
+    ========================= */
+
+    .contact-background{
+        min-height:auto !important;
+        padding:50px 20px 90px !important;
+    }
+
+    .contact-content{
+        width:100%;
+        max-width:100%;
+        margin-bottom:30px;
+    }
+
+    .contact-content h2{
+        font-size:2.3rem !important;
+        line-height:1.05;
+    }
+
+    .contact-content p{
+        max-width:100%;
+        font-size:15px;
+    }
+
+    .whatsapp-btn{
+        width:100%;
+        max-width:100%;
+    }
+
+    .contact-form{
+        width:100% !important;
+        max-width:100%;
+        padding:22px;
+        border-radius:22px;
+    }
+
+    .contact-signature{
+        margin-left:20px !important;
+        font-size:28px;
+    }
+
+    .contact-socials{
+        gap:12px;
+    }
+
+    .contact-socials a{
+        width:44px;
+        height:44px;
+    }
+
+
+    /* =========================
+       RODAPÉ
+    ========================= */
+
+    .site-footer{
+        margin:0 !important;
+        padding:20px 18px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 480px){
+
+    .header-inner{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+    .hero-inner{
+        padding-left:16px;
+        padding-right:16px;
+        padding-top:35px;
+    }
+
+    .hero-image{
+        width:88vw !important;
+    }
+
+    .hero-title{
+        font-size:2rem;
+    }
+
+    .about .container,
+    #depoimentos .container{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+    .about-content h2{
+        font-size:2rem;
+    }
+
+    .titulo-marcas{
+        font-size:2.1rem;
+    }
+
+    .portfolio-category h2{
+        font-size:2.35rem !important;
+    }
+
+    .video-grid video{
+        flex-basis:145px;
+        width:145px;
+        height:290px;
+    }
+
+    .fotos-heading .section-title{
+        font-size:2rem;
+    }
+
+    .contact-content h2{
+        font-size:2.1rem !important;
+    }
+}
