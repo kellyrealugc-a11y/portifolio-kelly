@@ -3760,3 +3760,34 @@ html{
         font-size:2.1rem !important;
     }
 }
+/* =========================================================
+   AJUSTE FINAL — FOTO MOBILE
+========================================================= */
+
+@media (max-width: 768px){
+
+    /* Remove espaço excessivo antes/depois da foto */
+    .fotos-destaque{
+        padding-top:25px !important;
+        padding-bottom:35px !important;
+    }
+
+    .fotos-heading{
+        margin-bottom:18px !important;
+    }
+
+    /* Foto inteira, sem cortar */
+    .foto-principal{
+        width:100% !important;
+        padding:5px;
+        margin:0 auto;
+    }
+
+    .foto-principal img{
+        width:100% !important;
+        height:auto !important;
+        aspect-ratio:auto !important;
+        object-fit:contain !important;
+        display:block;
+    }
+}
