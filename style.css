@@ -3792,12 +3792,12 @@ html{
     }
 }
 /* =========================================================
-   CORREÇÃO MOBILE DEFINITIVA
+   AJUSTE FINAL — HERO MOBILE
 ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* MENU FECHADO AO CARREGAR */
+    /* MENU — continua fechado ao carregar */
     .site-nav {
         display: none !important;
         position: absolute !important;
@@ -3808,12 +3808,10 @@ html{
         z-index: 10000 !important;
     }
 
-    /* SÓ ABRE QUANDO CLICAR NO ☰ */
     .site-nav.is-open {
         display: flex !important;
     }
 
-    /* HEADER */
     .site-header {
         position: sticky !important;
         top: 0 !important;
@@ -3825,14 +3823,42 @@ html{
     }
 
 
-    /* =====================================================
-       CAPA — MOSTRAR A FOTO INTEIRA
-    ===================================================== */
+    /* ==============================================
+       HERO — TIRA O ESPAÇO GIGANTE
+    ============================================== */
+
+    .hero {
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    .hero-inner {
+        min-height: 0 !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        gap: 25px !important;
+        padding: 25px 20px 55px !important;
+    }
+
+    .hero-text-content {
+        position: static !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* ==============================================
+       CAPA — FOTO INTEIRA
+    ============================================== */
 
     .hero-image {
+        order: 1 !important;
         width: 100% !important;
         max-width: 390px !important;
         height: auto !important;
+        min-height: 0 !important;
         aspect-ratio: auto !important;
         margin: 0 auto !important;
         overflow: visible !important;
@@ -3842,9 +3868,9 @@ html{
         display: block !important;
         width: 100% !important;
         height: auto !important;
+        min-height: 0 !important;
         max-width: 100% !important;
         aspect-ratio: auto !important;
         object-fit: contain !important;
     }
-
 }
