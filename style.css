@@ -3874,3 +3874,15 @@ html{
         object-fit: contain !important;
     }
 }
+@media (max-width: 768px) {
+
+    /* CÍRCULO DECORATIVO — AJUSTE MOBILE */
+    .hero-shape {
+        width: 300px !important;
+        height: 300px !important;
+        top: -80px !important;
+        right: -160px !important;
+        opacity: 0.18 !important;
+    }
+
+}
