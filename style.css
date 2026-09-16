@@ -3886,3 +3886,83 @@ html{
     }
 
 }
+/* =========================================================
+   CORREÇÃO MOBILE — HERO SEM ESPAÇO
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        position: relative !important;
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .hero-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        min-height: 0 !important;
+        height: auto !important;
+
+        padding: 15px 16px 40px !important;
+        margin: 0 !important;
+
+        gap: 15px !important;
+    }
+
+    .hero-text-content {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .hero-image {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 390px !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        overflow: visible !important;
+    }
+
+    .hero-image img {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        aspect-ratio: auto !important;
+        object-fit: contain !important;
+
+        margin: 0 !important;
+    }
+
+    /* círculo decorativo não interfere no conteúdo */
+    .hero-shape {
+        pointer-events: none !important;
+        z-index: 0 !important;
+    }
+
+    .hero-inner {
+        z-index: 2 !important;
+    }
+
+}
