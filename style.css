@@ -3966,3 +3966,10 @@ html{
     }
 
 }
+@media (max-width: 768px) {
+
+    .hero-shape {
+        display: none !important;
+    }
+
+}
