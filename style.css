@@ -3966,10 +3966,90 @@ html{
     }
 
 }
+/* =========================================================
+   HERO MOBILE — CORREÇÃO DEFINITIVA
+========================================================= */
+
 @media (max-width: 768px) {
 
-    .hero-shape {
+    /* tira as decorações que estão atrapalhando a capa */
+    .hero-shape,
+    .hero-top-wave,
+    .hero-wave {
         display: none !important;
     }
 
+    .hero {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .hero-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        padding: 25px 16px 45px !important;
+        margin: 0 !important;
+
+        gap: 20px !important;
+    }
+
+    .hero-text-content {
+        order: 1 !important;
+        position: static !important;
+
+        width: 100% !important;
+        max-width: 560px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+    }
+
+    .hero-image {
+        order: 2 !important;
+
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 390px !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        aspect-ratio: auto !important;
+        overflow: visible !important;
+    }
+
+    .hero-image img {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        aspect-ratio: auto !important;
+        object-fit: contain !important;
+
+        margin: 0 !important;
+    }
+
+    .hero-signature {
+        display: none !important;
+    }
 }
