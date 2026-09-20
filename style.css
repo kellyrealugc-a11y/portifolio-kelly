@@ -155,13 +155,27 @@ ul { padding: 0; margin: 0; list-style: none; }
    4. CABEÇALHO / NAVEGAÇÃO
 --------------------------------------------------------------------- */
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(245, 241, 232, 0.92);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--color-border);
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    background: transparent !important;
+    background-color: transparent !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    border: none !important;
+    box-shadow: none !important;
+
+    z-index: 1000 !important;
 }
+
 
 .header-inner {
   display: flex;
@@ -229,233 +243,112 @@ ul { padding: 0; margin: 0; list-style: none; }
 /* ---------------------------------------------------------------------
    5. BANNER PRINCIPAL (HERO)
 --------------------------------------------------------------------- */
-/* ================= HERO ================= */
-/* ================= HERO ================= */
+/* =========================================================
+   CAPA PRINCIPAL — KELLY REAL
+   ========================================================= */
 
-.hero{
-    position:relative;
-    overflow:hidden;
+/* =========================================================
+   KELLY REAL — CAPA ORGÂNICA
+   USA A IMAGEM EXISTENTE: "Nova capa.png"
+   ========================================================= */
 
-    background:
-        radial-gradient(
-            ellipse 55% 90% at 82% 45%,
-            rgba(183,124,152,.32) 0%,
-            rgba(183,124,152,.20) 35%,
-            rgba(183,124,152,.08) 65%,
-            transparent 100%
-        ),
-        radial-gradient(
-            ellipse 45% 70% at 55% 5%,
-            rgba(170,128,201,.20) 0%,
-            rgba(170,128,201,.10) 45%,
-            transparent 100%
-        ),
-        #f8f4ef;
+.hero-home {
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 700px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background-image: url("CAPA6.png") !important;
+    background-size: 100% auto !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    overflow: hidden !important;
+
+    z-index: 1 !important;
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    width:620px;
-    height:500px;
-    right:2%;
-    top:20px;
-    background:#ead5df;
-    border-radius:48% 52% 60% 40% / 42% 45% 55% 58%;
-    transform:rotate(-8deg);
-    z-index:0;
+
+/* =========================================================
+   DESKTOP GRANDE
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+    .hero-home {
+        height: 100vh;
+        min-height: 700px;
+        background-position: center center;
+    }
+
 }
 
-.hero-inner{
-    position:relative;
-    z-index:2;
 
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    padding-bottom: 40px;
-    gap:30px;
+/* =========================================================
+   NOTEBOOK / TELAS MÉDIAS
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1399px) {
+
+    .hero-home {
+        height: 100vh;
+        min-height: 600px;
+        background-position: center center;
+    }
+
+    .instagram-hotspot {
+        right: 190px;
+    }
+
+    .tiktok-hotspot {
+        right: 95px;
+    }
+
 }
 
-.hero-text-content{
-    max-width:560px;
-    margin-left:60px;
-}
 
-.hero-kicker{
-    font-size:14px;
-    letter-spacing:3px;
-    margin-bottom:18px;
-    color:#666;
-}
+/* =========================================================
+   CELULAR
+   ========================================================= */
 
-.hero-title{
-    font-size:2.7rem;
-    line-height:1.05;
-    font-weight:400;
-    margin-bottom:24px;
-}
+@media (max-width: 768px) {
 
-.hero-title span{
-    color:#c053ca;
-}
+    .hero-home {
+        width: 100%;
+        height: auto;
+        min-height: 0;
 
-.hero-text{
-    font-size:18px;
-    line-height:1.7;
-    max-width:460px;
-    margin-bottom:20px;
-    color:#666;
-}
+        aspect-ratio: 16 / 9;
 
-.hero-actions{
-    display:flex;
-    gap:16px;
-}
+        background-size: cover;
+        background-position: center center;
+    }
 
-.hero-image{
-    position:relative;
-    z-index:3;
-    width:460px;
-    height:430px;
-    justify-self:center;
-    overflow:visible;
-}
+    .instagram-hotspot {
+        top: 5%;
+        right: 18%;
+        width: 45px;
+        height: 55px;
+    }
 
-.hero-image img{
-    display:block;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:38px;
-}
+    .tiktok-hotspot {
+        top: 5%;
+        right: 7%;
+        width: 45px;
+        height: 55px;
+    }
 
-.foto-capa{
-    width:100%;
-    max-width:480px;
-    border-radius:30px;
-    display:block;
-}
-.hero-signature{
-    position:absolute;
-    left:55%;
-    bottom:70px;
-    z-index:5;
-
-    font-family:"Caveat", cursive;
-    font-size:38px;
-    font-weight:600;
-    line-height:1;
-
-    color:#a53ae7;
-
-    white-space:nowrap;
-
-    transform:rotate(-6deg);
-
-    text-shadow:
-        0 2px 8px rgba(255,255,255,.85),
-        0 0 1px rgba(149, 17, 226, 0.35);
-}
-
-.hero-wave{
-    position:absolute;
-    bottom:-1px;
-    left:0;
-    width:100%;
-    height:90px;
-    z-index:6;
-    pointer-events:none;
-}
-
-.hero-wave svg{
-    display:block;
-    width:100%;
-    height:100%;
-}
-
-.hero-wave path{
-    fill:#f8f4ef;
-}
-.hero-top-wave{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:70px;
-    z-index:1;
-    pointer-events:none;
-}
-
-.hero-top-wave svg{
-    width:100%;
-    height:100%;
-    display:block;
-}
-
-.hero-top-wave path{
-    fill:#ead7e0;
-}
-.hero-actions{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin-top:28px;
-}
-
-.hero-actions .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-
-    padding:14px 27px;
-
-    border-radius:999px;
-
-    text-decoration:none;
-
-    font-size:14px;
-    font-weight:600;
-
-    transition:all .3s ease;
-}
-
-.hero-actions .btn-primary{
-    background:#a978c7;
-    color:#fff;
-    border:1px solid #a978c7;
-}
-
-.hero-actions .btn-primary:hover{
-    background:#9565b4;
-    transform:translateY(-2px);
-    box-shadow:0 10px 24px rgba(169,120,199,.25);
-}
-
-.hero-actions .btn-ghost{
-    background:rgba(255,255,255,.35);
-    color:#302722;
-    border:1px solid #302722;
-}
-
-.hero-actions .btn-ghost:hover{
-    background:#302722;
-    color:#fff;
-    transform:translateY(-2px);
-}
-
-.hero-actions .btn span{
-    font-size:17px;
-    line-height:1;
 }
 /* ---------------------------------------------------------------------
    6. SOBRE
 --------------------------------------------------------------------- */
 /* Fundo orgânico da seção Sobre */
-.about{
-    padding: 40px 0 90px;
-    background: #faf7f4;
+#sobre {
+    margin-top: -30px !important;
+    padding-top: 0 !important;
 }
 
 .about .container{
@@ -2912,11 +2805,11 @@ textarea:focus-visible {
 
     min-width:180px;
 
-    background:#fff;
+    background:transparent !important;
     border-radius:12px;
     padding:10px 0;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    box-shadow:none;
 
     z-index:1000;
 }
@@ -3812,12 +3705,6 @@ html{
         display: flex !important;
     }
 
-    .site-header {
-        position: sticky !important;
-        top: 0 !important;
-        z-index: 9999 !important;
-    }
-
     .header-inner {
         position: relative !important;
     }
@@ -4051,5 +3938,1295 @@ html{
 
     .hero-signature {
         display: none !important;
+    }
+}
+/* =========================================================
+   REDES SOCIAIS — CAPA
+   ========================================================= */
+
+.hero-social-links {
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.social-hotspot {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    pointer-events: auto;
+    cursor: pointer;
+
+    transition: transform .25s ease, background .25s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.social-hotspot:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: #fff;
+}
+
+
+/* =========================================================
+   ÍCONES SOCIAIS — CAPA PRINCIPAL
+   ========================================================= */
+
+.hero-social-links {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.social-hotspot {
+    position: absolute;
+
+    width: 42px;
+    height: 42px;
+
+    display: block;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    cursor: pointer;
+    pointer-events: auto;
+
+    transition: transform 0.25s ease;
+}
+
+.social-hotspot:hover {
+    transform: scale(1.08);
+}
+
+
+/* INSTAGRAM */
+
+.instagram-hotspot {
+    top: 20px;
+    right: 205px;
+
+    background-image: url("Intagram2.png");
+}
+
+
+/* TIKTOK */
+
+.tiktok-hotspot {
+    top: 20px;
+    right: 145px;
+
+    background-image: url("Tiktoknovo.png");
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .social-hotspot {
+        width: 32px;
+        height: 32px;
+    }
+
+    .instagram-hotspot {
+        top: 12px;
+        right: 62px;
+    }
+
+    .tiktok-hotspot {
+        top: 12px;
+        right: 20px;
+    }
+}
+/* =========================================================
+   CAPA KELLY REAL — ACABAMENTO ORGÂNICO
+   ========================================================= */
+
+.hero-home {
+    position: relative !important;
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 680px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background-image: url("CAPA6.png") !important;
+   background-size: 100% auto !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   ONDA ORGÂNICA INFERIOR
+   ========================================================= */
+
+.hero-home::after {
+    content: "";
+
+    position: absolute;
+
+    left: -5%;
+    bottom: -3px;
+
+    width: 110%;
+    height: 125px;
+
+    background: #F9F4EF;
+
+    border-top: 2px solid #C83FE8;
+
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   CURVA ORGÂNICA SUPERIOR
+   ========================================================= */
+
+.hero-home::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -4%;
+
+    width: 34%;
+    height: 95px;
+
+    background: rgba(249, 244, 239, 0.90);
+
+    border-bottom: 2px solid #C83FE8;
+
+    border-radius: 0 0 55% 45% / 0 0 65% 55%;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   LOGOS — APENAS CONTORNO ROXO
+   ========================================================= */
+
+.social-hotspot {
+    position: absolute !important;
+
+    width: 52px !important;
+    height: 52px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    background-color: transparent !important;
+
+    border: 2px solid #C83FE8 !important;
+
+    border-radius: 50% !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 30 !important;
+
+    cursor: pointer !important;
+
+    transition: transform .25s ease,
+                box-shadow .25s ease;
+}
+
+.social-hotspot:hover {
+    transform: scale(1.06);
+
+    box-shadow:
+        0 0 0 3px rgba(200, 63, 232, .12);
+}
+
+
+/* INSTAGRAM */
+
+.instagram-hotspot {
+    top: 20px !important;
+    right: 215px !important;
+
+    background-image: url("Intagram2.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 38px 38px !important;
+}
+
+
+/* TIKTOK */
+
+.tiktok-hotspot {
+    top: 20px !important;
+    right: 120px !important;
+
+    background-image: url("Tiktoknovo.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 38px 38px !important;
+}
+@media (max-width: 768px) {
+
+    .hero-home {
+        height: 620px !important;
+        min-height: 620px !important;
+
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+
+    .hero-home::after {
+        height: 65px;
+        bottom: -2px;
+    }
+
+    .hero-home::before {
+        width: 65%;
+        height: 60px;
+        top: -35px;
+    }
+
+    .social-hotspot {
+        width: 48px !important;
+        height: 48px !important;
+
+        border-width: 2px !important;
+    }
+
+    .instagram-hotspot {
+        top: 12px !important;
+        right: 68px !important;
+
+        background-size: 29px 29px !important;
+    }
+
+    .tiktok-hotspot {
+        top: 12px !important;
+        right: 15px !important;
+
+        background-size: 29px 29px !important;
+    }
+}
+/* =========================================================
+   KELLY REAL — HERO FINAL
+   FOTO EXISTENTE: Nova capa.png
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CAPA
+--------------------------------------------------------- */
+
+.hero-home {
+    position: relative !important;
+
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 700px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background-image: url("CAPA6.png") !important;
+    background-size: 100% auto !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+
+    overflow: hidden !important;
+
+    z-index: 1 !important;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER — TRANSPARENTE SOBRE A FOTO
+--------------------------------------------------------- */
+
+.site-header {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    background: transparent !important;
+    background-color: transparent !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    border: none !important;
+    box-shadow: none !important;
+
+    z-index: 1000 !important;
+}
+
+.header-inner {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   NOME KELLY REAL
+--------------------------------------------------------- */
+
+.site-header .logo {
+    color: #ffffff !important;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.45);
+}
+
+
+/* ---------------------------------------------------------
+   MENU
+--------------------------------------------------------- */
+
+.site-nav {
+    background: transparent !important;
+}
+
+.site-nav a {
+    color: #ffffff !important;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,.45);
+}
+
+
+/* ---------------------------------------------------------
+   BOTÃO CONTATO
+--------------------------------------------------------- */
+
+.site-nav .nav-cta {
+    background: #A47BC6 !important;
+
+    color: #ffffff !important;
+
+    text-shadow: none !important;
+
+    border: none !important;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.18);
+}
+
+
+/* ---------------------------------------------------------
+   CURVA ORGÂNICA SUPERIOR
+   SOMENTE A LINHA ROXA — SEM TARJA
+--------------------------------------------------------- */
+
+.hero-home::before {
+    content: "";
+
+    position: absolute;
+
+    top: -85px;
+    left: -80px;
+
+    width: 620px;
+    height: 170px;
+
+    background: transparent;
+
+    border-bottom: 3px solid #C83FE8;
+
+    border-radius: 50%;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   ONDA ORGÂNICA INFERIOR
+--------------------------------------------------------- */
+
+.hero-home::after {
+    content: "";
+
+    position: absolute;
+
+    left: -5%;
+    bottom: -2px;
+
+    width: 110%;
+    height: 170px;
+
+    background: #F9F4EF;
+
+    border-top: 3px solid #C83FE8;
+
+    border-radius:
+        50% 50% 0 0 /
+        100% 100% 0 0;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   REDES SOCIAIS
+--------------------------------------------------------- */
+
+.social-hotspot {
+    position: absolute !important;
+
+    width: 52px !important;
+    height: 52px !important;
+
+    border: 2px solid #C83FE8 !important;
+    border-radius: 50% !important;
+
+    background-color: rgba(255, 255, 255, 0.08) !important;
+
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 38px 38px !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    z-index: 50 !important;
+
+    transition: transform .25s ease, box-shadow .25s ease !important;
+}
+
+
+
+/* ---------------------------------------------------------
+   INSTAGRAM
+--------------------------------------------------------- */
+
+.instagram-hotspot {
+    top: 12px !important;
+    right: 120px !important;
+
+    background-image: url("Intagram2.png") !important;
+    background-size: 38px 38px !important;
+}
+
+
+
+/* ---------------------------------------------------------
+   TIKTOK
+--------------------------------------------------------- */
+
+.tiktok-hotspot {
+    top: 12px !important;
+    right: 40px !important;
+
+    background-image: url("Tiktoknovo.png") !important;
+    background-size: 38px 38px !important;
+}
+
+
+
+/* ---------------------------------------------------------
+   HOVER DOS LOGOS
+--------------------------------------------------------- */
+
+.social-hotspot:hover {
+    transform: scale(1.06);
+
+    box-shadow:
+        0 0 0 4px rgba(200,63,232,.15);
+}
+
+
+/* ---------------------------------------------------------
+   DEIXA ESPAÇO PARA OS LOGOS
+   SEM EMPURRAR O MENU
+--------------------------------------------------------- */
+
+@media (min-width: 769px) {
+
+    .site-nav {
+        padding-right: 175px !important;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-home {
+        width: 100% !important;
+
+        height: 100svh !important;
+        min-height: 620px !important;
+
+        background-size: cover !important;
+
+        background-position: center center !important;
+    }
+
+
+    /* MENU TRANSPARENTE */
+
+    .site-header {
+        position: absolute !important;
+
+        top: 0 !important;
+        left: 0 !important;
+
+        width: 100% !important;
+
+        background: transparent !important;
+
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* CURVA SUPERIOR */
+
+    .hero-home::before {
+        top: -40px;
+        left: -100px;
+
+        width: 360px;
+        height: 100px;
+
+        border-bottom-width: 2px;
+    }
+
+
+    /* ONDA INFERIOR */
+
+    .hero-home::after {
+        left: -10%;
+
+        width: 120%;
+
+        height: 85px;
+
+        border-top-width: 2px;
+    }
+
+
+    /* LOGOS */
+
+    .social-hotspot {
+        top: 12px !important;
+
+        width: 46px !important;
+        height: 46px !important;
+    }
+
+
+    .instagram-hotspot {
+        right: 72px !important;
+
+        background-size: 29px 29px !important;
+    }
+
+
+    .tiktok-hotspot {
+        right: 17px !important;
+
+        background-size: 29px 29px !important;
+    }
+
+
+    /* MENU MOBILE */
+
+    .site-nav {
+        background: #F9F4EF !important;
+    }
+
+}
+/* =========================================================
+   CORREÇÃO FINAL — HEADER TOTALMENTE TRANSPARENTE
+   ========================================================= */
+
+.site-header,
+.site-header *,
+.header-inner,
+.site-nav,
+.site-nav ul {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* HEADER */
+
+.site-header {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100% !important;
+
+    border: none !important;
+
+    z-index: 9999 !important;
+}
+
+
+/* CONTAINER DO HEADER */
+
+.header-inner {
+    position: relative !important;
+
+    width: 100% !important;
+
+    border: none !important;
+}
+
+
+/* MENU */
+
+.site-nav {
+    border: none !important;
+}
+
+
+/* LINKS */
+
+.site-nav a,
+.site-header .logo {
+    color: #ffffff !important;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.55) !important;
+}
+
+
+/* BOTÃO CONTATO */
+
+.site-nav .nav-cta {
+    background: #A47BC6 !important;
+
+    color: #ffffff !important;
+
+    text-shadow: none !important;
+}
+
+
+/* =========================================================
+   GARANTE QUE A FOTO COMEÇA NO TOPO
+   ========================================================= */
+
+.hero-home {
+    position: relative !important;
+
+    margin-top: 0 !important;
+
+    background-image: url("CAPA6.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+
+/* =========================================================
+   REMOVE QUALQUER FUNDO DO HEADER NO DESKTOP
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+    .site-header {
+        background: none !important;
+    }
+
+    .header-inner {
+        background: none !important;
+    }
+
+    .site-nav {
+        background: none !important;
+    }
+}
+/* =========================================================
+   CORREÇÃO DEFINITIVA — HEADER TRANSPARENTE
+   ========================================================= */
+
+.site-header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border: none !important;
+    box-shadow: none !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    z-index: 9999 !important;
+}
+
+.site-header .header-inner {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.site-header .site-nav {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* garante que a capa fique atrás do menu */
+.hero-home {
+    position: relative !important;
+    margin-top: 0 !important;
+}
+
+/* somente no celular o menu aberto pode ter fundo */
+@media (max-width: 768px) {
+
+    .site-header {
+        position: absolute !important;
+        background: transparent !important;
+    }
+
+    .site-nav {
+        background: #F9F4EF !important;
+    }
+
+    .site-nav.is-open {
+        background: #F9F4EF !important;
+    }
+}
+/* =========================================================
+   CORREÇÃO — REMOVE O FUNDO BRANCO DA CURVA SUPERIOR
+   ========================================================= */
+
+.hero-home::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    top: -85px !important;
+    left: -80px !important;
+
+    width: 620px !important;
+    height: 170px !important;
+
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border-bottom: 3px solid #C83FE8 !important;
+    border-radius: 50% !important;
+
+    z-index: 20 !important;
+
+    pointer-events: none !important;
+}
+/* TESTE DEFINITIVO DO CABEÇALHO */
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.site-header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    height: 72px !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border: 0 !important;
+    box-shadow: none !important;
+
+    z-index: 99999 !important;
+}
+
+.header-inner {
+    height: 72px !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 30px !important;
+
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.site-nav {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.hero-home {
+    position: relative !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    width: 100% !important;
+
+    background-image: url("CAPA6.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+/* =========================================================
+   LOGOS — CÍRCULO ROXO + LOGO REDONDO
+   ========================================================= */
+
+.hero-social-links .social-hotspot {
+    position: absolute !important;
+
+    width: 62px !important;
+    height: 62px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border: 1px solid #C83FE8 !important;
+    border-radius: 50% !important;
+
+    /* CÍRCULO ROXO */
+    background: #A47BC6 !important;
+
+    /* REMOVE O PNG DO PRÓPRIO BOTÃO */
+    background-image: none !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+
+    pointer-events: auto !important;
+    cursor: pointer !important;
+
+    z-index: 9999 !important;
+}
+
+
+/* =========================================================
+   LOGOS SOCIAIS — AJUSTE DEFINITIVO
+   ========================================================= */
+
+/* BOTÃO / CÍRCULO */
+.hero-social-links .social-hotspot {
+    position: absolute !important;
+
+    width: 56px !important;
+    height: 56px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    /* SOMENTE CONTORNO ROXO */
+    border: 1px solid #C83FE8 !important;
+    border-radius: 50% !important;
+
+    /* SEM BRANCO */
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    overflow: hidden !important;
+
+    box-shadow: none !important;
+
+    z-index: 99999 !important;
+}
+
+
+/* REMOVE QUALQUER CAMADA ANTIGA */
+
+.hero-social-links .social-hotspot::before {
+    content: none !important;
+    display: none !important;
+}
+
+
+/* LOGOS */
+
+.hero-social-links .social-hotspot::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    width: 44px !important;
+    height: 44px !important;
+
+    margin: 0 !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+
+    z-index: 2 !important;
+}
+
+
+/* INSTAGRAM */
+
+.hero-social-links .instagram-hotspot::after {
+    background-image: url("Intagram2.png") !important;
+
+    /* tamanho visual do Instagram */
+    transform: translate(-50%, -50%) scale(1.05) !important;
+}
+
+
+/* TIKTOK */
+
+.hero-social-links .tiktok-hotspot::after {
+    background-image: url("Tiktoknovo.png") !important;
+
+    /* o arquivo do TikTok tem mais espaço transparente */
+    transform: translate(-50%, -50%) scale(1.35) !important;
+}
+
+
+/* POSIÇÃO DESKTOP */
+
+.hero-social-links .instagram-hotspot {
+    top: 12px !important;
+    right: 105px !important;
+}
+
+.hero-social-links .tiktok-hotspot {
+    top: 12px !important;
+    right: 25px !important;
+}
+
+
+/* HOVER */
+
+.hero-social-links .social-hotspot:hover {
+    transform: scale(1.03) !important;
+
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-social-links .social-hotspot {
+        width: 48px !important;
+        height: 48px !important;
+
+        border-width: 1px !important;
+    }
+
+    .hero-social-links .social-hotspot::after {
+        width: 37px !important;
+        height: 37px !important;
+    }
+
+    .hero-social-links .instagram-hotspot::after {
+        transform:
+            translate(-50%, -50%)
+            scale(1.05) !important;
+    }
+
+    .hero-social-links .tiktok-hotspot::after {
+        transform:
+            translate(-50%, -50%)
+            scale(1.35) !important;
+    }
+
+    .hero-social-links .instagram-hotspot {
+        top: 12px !important;
+        right: 68px !important;
+    }
+
+    .hero-social-links .tiktok-hotspot {
+        top: 12px !important;
+        right: 15px !important;
+    }
+}
+/* =========================================================
+   LOGOS — AJUSTE FINAL
+   ========================================================= */
+
+.hero-social-links .social-hotspot {
+    width: 56px !important;
+    height: 56px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: 1px solid #C83FE8 !important;
+    border-radius: 50% !important;
+
+    background: transparent !important;
+    background-image: none !important;
+
+    box-shadow: none !important;
+    overflow: hidden !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+/* REMOVE CAMADAS ANTIGAS */
+
+.hero-social-links .social-hotspot::before {
+    display: none !important;
+}
+
+
+/* TAMANHO DOS LOGOS */
+
+.hero-social-links .social-hotspot::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    width: 38px !important;
+    height: 38px !important;
+
+    margin: 0 !important;
+
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+
+    z-index: 2 !important;
+}
+
+
+/* INSTAGRAM */
+
+.hero-social-links .instagram-hotspot::after {
+    background-image: url("Intagram2.png") !important;
+
+    transform: translate(-50%, -50%) !important;
+}
+
+
+/* TIKTOK */
+
+.hero-social-links .tiktok-hotspot::after {
+    background-image: url("Tiktoknovo.png") !important;
+
+    transform: translate(-50%, -50%) scale(1.12) !important;
+}
+
+
+/* POSIÇÃO */
+
+.hero-social-links .instagram-hotspot {
+    top: 12px !important;
+    right: 105px !important;
+}
+
+.hero-social-links .tiktok-hotspot {
+    top: 12px !important;
+    right: 25px !important;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    .hero-social-links .social-hotspot {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .hero-social-links .social-hotspot::after {
+        width: 33px !important;
+        height: 33px !important;
+    }
+
+    .hero-social-links .tiktok-hotspot::after {
+        transform:
+            translate(-50%, -50%)
+            scale(1.12) !important;
+    }
+}
+/* =========================================================
+   CAPA — DIMINUIR O TAMANHO DA IMAGEM
+   ========================================================= */
+
+.hero-home {
+    background-size: 115% auto !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-color: #F9F4EF !important;
+}
+/* =========================================================
+   BOTÃO — VER PORTFÓLIO
+   ========================================================= */
+
+.hero-portfolio-btn {
+    position: absolute !important;
+
+    left: 7% !important;
+    bottom: 180px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+
+    min-width: 205px !important;
+    height: 54px !important;
+
+    padding: 0 26px !important;
+
+    background: #FFFFFF !important;
+
+    border: 2px solid #C83FE8 !important;
+    border-radius: 30px !important;
+
+    color: #A83CCF !important;
+
+    font-family: "Work Sans", Arial, sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+
+    text-decoration: none !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 100 !important;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease !important;
+}
+
+
+/* SETA */
+
+.hero-portfolio-btn span {
+    font-size: 25px !important;
+    line-height: 1 !important;
+
+    color: #C83FE8 !important;
+
+    transition: transform 0.25s ease !important;
+}
+
+
+/* HOVER */
+
+.hero-portfolio-btn:hover {
+    transform: translateY(-2px) !important;
+
+    background: #FFFFFF !important;
+
+    box-shadow: 0 8px 22px rgba(200, 63, 232, 0.18) !important;
+}
+
+.hero-portfolio-btn:hover span {
+    transform: translateX(4px) !important;
+}
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-portfolio-btn {
+        left: 50% !important;
+        bottom: 80px !important;
+
+        transform: translateX(-50%) !important;
+
+        min-width: 180px !important;
+        height: 48px !important;
+
+        padding: 0 22px !important;
+
+        font-size: 15px !important;
+    }
+
+    .hero-portfolio-btn:hover {
+        transform: translateX(-50%) translateY(-2px) !important;
     }
 }
