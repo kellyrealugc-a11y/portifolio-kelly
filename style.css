@@ -5230,3 +5230,166 @@ body {
         transform: translateX(-50%) translateY(-2px) !important;
     }
 }
+/* =========================================================
+   CORREÇÃO REAL — ESPAÇO ENTRE CAPA E SOBRE
+   SOMENTE CELULAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* PRIMEIRO #SOBRE — SOMENTE OS LINKS */
+    .hero-home + section#sobre {
+        display: block !important;
+
+        height: 1px !important;
+        min-height: 1px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        position: relative !important;
+
+        overflow: visible !important;
+    }
+
+    /* área dos links */
+    .hero-home + section#sobre .hero-social-links {
+        position: absolute !important;
+
+        top: 0 !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        height: 1px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow: visible !important;
+    }
+
+    /* mantém os dois links */
+    .hero-home + section#sobre .instagram-hotspot,
+    .hero-home + section#sobre .tiktok-hotspot {
+        position: absolute !important;
+        z-index: 999999 !important;
+    }
+
+    /* SEGUNDO #SOBRE — O VERDADEIRO CONTEÚDO */
+    .hero-home + section#sobre + section#sobre {
+        margin-top: 0 !important;
+        padding-top: 40px !important;
+    }
+
+}
+/* =========================================================
+   CORREÇÃO FINAL — HERO MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-home {
+        width: 100% !important;
+
+        /* remove a altura gigante do celular */
+        height: 430px !important;
+        min-height: 430px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        /* mantém a capa proporcional */
+        background-size: 100% auto !important;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
+
+        overflow: hidden !important;
+    }
+
+    /* curva inferior */
+    .hero-home::after {
+        height: 65px !important;
+        bottom: -2px !important;
+    }
+
+    /* botão */
+    .hero-portfolio-btn {
+        left: 50% !important;
+        bottom: 75px !important;
+
+        transform: translateX(-50%) !important;
+
+        min-width: 180px !important;
+        height: 48px !important;
+
+        padding: 0 22px !important;
+
+        font-size: 15px !important;
+    }
+}
+/* CAPA ESPECÍFICA PARA CELULAR */
+@media (max-width: 768px) {
+    .hero-home {
+        background-image: url("Capa celular.png") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+}
+/* =========================================
+   AJUSTE SOMENTE PARA CELULAR
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .hero-home {
+        width: 100% !important;
+        height: 620px !important;
+        min-height: 620px !important;
+
+        background-size: 100% auto !important;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .hero-home .instagram-hotspot {
+        top: 14% !important;
+    }
+
+    .hero-home .tiktok-hotspot {
+        top: 14% !important;
+    }
+
+}
+@media (max-width: 768px) {
+    .nav-toggle span {
+        background: #FFFFFF !important;
+    }
+}
+/* =========================================
+   AJUSTE DE ESPAÇAMENTO — SOMENTE CELULAR
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* aproxima o conteúdo real do Sobre */
+    .hero-home + section#sobre + section#sobre {
+        padding-top: 15px !important;
+    }
+
+    /* MARCAS */
+    .marcas {
+        padding-top: 20px !important;
+        padding-bottom: 25px !important;
+    }
+
+    /* PORTFÓLIO */
+    .portfolio-category {
+        padding-top: 25px !important;
+        padding-bottom: 35px !important;
+    }
+
+}
