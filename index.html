@@ -144,7 +144,7 @@
       <div class="about-media">
 
     <img
-        src="Fotodasegundapagina.jpeg"
+        src="crianças.jpeg"
         alt="Kelly UGC Creator"
         loading="lazy"
         width="400"
@@ -1356,23 +1356,20 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    document.querySelectorAll(".read-more").forEach(function (botao) {
+    document.querySelectorAll(".faq-plus").forEach(function (botao) {
 
-        botao.addEventListener("click", function (event) {
+        botao.addEventListener("click", function () {
 
-            event.preventDefault();
+            const item = this.closest(".faq-item");
 
-            const card = this.closest(".testimonial-card");
-            const texto = card.querySelector(".testimonial-text");
+            if (!item) return;
 
-            if (!texto) return;
-
-            const aberto = texto.classList.toggle("expandido");
+            const aberto = item.classList.toggle("faq-aberto");
 
             if (aberto) {
-                this.textContent = "Mostrar menos ↑";
+                this.textContent = "−";
             } else {
-                this.textContent = "Ler Feedbacks completo →";
+                this.textContent = "+";
             }
 
         });
